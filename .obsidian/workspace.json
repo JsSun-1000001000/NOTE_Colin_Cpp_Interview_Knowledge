@@ -164,13 +164,23 @@
               "icon": "lucide-list",
               "title": "欢迎 的大纲"
             }
+          },
+          {
+            "id": "6d54aa2f6f5b461f",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,7 +194,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "34583f1d86c711fd",
+  "active": "c5e1af74c23e70ba",
   "lastOpenFiles": [
     "8_面试算法",
     "7_基础知识综合",
