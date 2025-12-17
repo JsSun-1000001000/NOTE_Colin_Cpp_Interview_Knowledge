@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a5a3a557d680bbc0",
+        "id": "9ad868c95f52b974",
         "type": "tabs",
         "children": [
           {
-            "id": "c5e1af74c23e70ba",
+            "id": "d58d902c65db882e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_C和C++/未命名.md",
+                "file": "1_C和C++/C1、动员&学习方法.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "C1、动员&学习方法"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 257.5
+    "width": 200
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -195,17 +195,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c5e1af74c23e70ba",
+  "active": "d58d902c65db882e",
   "lastOpenFiles": [
+    "2_C++",
+    "1_C和C++/C相关资料/C++内存泄露检查的5个方法.png",
+    "1_C和C++/C1、动员&学习方法.md",
+    "1_C和C++/C相关资料/README.md",
+    "1_C和C++/C相关资料/存储.pdf",
+    "1_C和C++/C相关资料/~$c基础小点.docx",
+    "1_C和C++/C相关资料/实现printf.txt",
+    "1_C和C++/C相关资料/c基础小点.docx",
+    "1_C和C++/C相关资料",
     "欢迎.md",
-    "1_C和C++/未命名.md",
-    "8_面试算法",
-    "7_基础知识综合",
-    "6_数据结构",
-    "5_操作系统",
-    "3_数据库",
-    "4_网络",
-    "2_逻辑",
-    "1_C和C++"
+    "9_面试算法",
+    "8_基础知识综合",
+    "7_数据结构",
+    "6_操作系统",
+    "4_数据库"
   ]
 }
