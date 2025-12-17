@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_C和C++/C1、动员&学习方法.md",
+                "file": "1_C和C++/C2、C语言复习1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "C1、动员&学习方法"
+              "title": "C2、C语言复习1"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -198,9 +197,10 @@
   },
   "active": "d58d902c65db882e",
   "lastOpenFiles": [
+    "1_C和C++/C1、动员&学习方法.md",
+    "1_C和C++/C2、C语言复习1.md",
     "2_C++",
     "1_C和C++/C相关资料/C++内存泄露检查的5个方法.png",
-    "1_C和C++/C1、动员&学习方法.md",
     "1_C和C++/C相关资料/README.md",
     "1_C和C++/C相关资料/存储.pdf",
     "1_C和C++/C相关资料/~$c基础小点.docx",
@@ -211,7 +211,6 @@
     "9_面试算法",
     "8_基础知识综合",
     "7_数据结构",
-    "6_操作系统",
-    "4_数据库"
+    "6_操作系统"
   ]
 }
