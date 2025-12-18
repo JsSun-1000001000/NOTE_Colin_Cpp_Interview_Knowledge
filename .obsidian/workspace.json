@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "827771698fbe70ab",
+        "id": "71b1c68d38494a6d",
         "type": "tabs",
         "children": [
           {
-            "id": "db50542e39892fd6",
+            "id": "c9533fc5c0a65520",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "9_面试算法/算法资料/算法小抄.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "算法小抄"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -76,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 311.5
+    "width": 200
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -192,7 +190,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "34583f1d86c711fd",
+  "active": "c9533fc5c0a65520",
   "lastOpenFiles": [
     "9_面试算法/算法资料/算法小抄.pdf",
     "9_面试算法/算法资料/剑指OFFER  名企面试官精讲典型编程题  第2版.pdf",
