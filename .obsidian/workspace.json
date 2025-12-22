@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_C和C++/C5、C语言复习3-1.md",
+                "file": "1_C和C++/C2、C语言复习1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "C5、C语言复习3-1"
+              "title": "C2、C语言复习1"
             }
           }
         ]
@@ -197,9 +197,11 @@
   },
   "active": "c9533fc5c0a65520",
   "lastOpenFiles": [
-    "1_C和C++/C4、C语言复习2-2.md",
-    "1_C和C++/C5、C语言复习3-1.md",
     "1_C和C++/C6、C语言复习3-2.md",
+    "1_C和C++/C相关资料/联合体的对齐问题.png",
+    "1_C和C++/C相关资料/结构体嵌套结构体的字节对齐.png",
+    "1_C和C++/C5、C语言复习3-1.md",
+    "1_C和C++/C4、C语言复习2-2.md",
     "1_C和C++/C相关资料/数组例题.png",
     "1_C和C++/C相关资料/数组.png",
     "1_C和C++/C3、C语言复习2-1.md",
