@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_C和C++/C6、C语言复习3-2.md",
+                "file": "1_C和C++/C7、printf实现.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "C6、C语言复习3-2"
+              "title": "C7、printf实现"
             }
           }
         ]
@@ -198,8 +198,10 @@
   },
   "active": "c9533fc5c0a65520",
   "lastOpenFiles": [
-    "1_C和C++/C2、C语言复习1.md",
     "1_C和C++/C6、C语言复习3-2.md",
+    "1_C和C++/C7、printf实现.md",
+    "1_C和C++/C相关资料/四区五段.png",
+    "1_C和C++/C2、C语言复习1.md",
     "1_C和C++/C相关资料/联合体的对齐问题.png",
     "1_C和C++/C相关资料/结构体嵌套结构体的字节对齐.png",
     "1_C和C++/C5、C语言复习3-1.md",
