@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_C++/Cpp1、C++11线程&3种锁.md",
+                "file": "1_C/C8、C习题1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cpp1、C++11线程&3种锁"
+              "title": "C8、C习题1"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 233.5
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2_C++/Cpp1、C++11线程&3种锁.md",
+                "file": "1_C/C8、C习题1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Cpp1、C++11线程&3种锁 的反向链接列表"
+              "title": "C8、C习题1 的反向链接列表"
             }
           },
           {
@@ -180,7 +180,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.5
+    "width": 205.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,8 +197,8 @@
   },
   "active": "c9533fc5c0a65520",
   "lastOpenFiles": [
-    "1_C/C9、C习题2.md",
     "2_C++/Cpp1、C++11线程&3种锁.md",
+    "1_C/C9、C习题2.md",
     "2_C++/C++相关资料/智能指针shared_ptr实现.txt",
     "2_C++/C++相关资料/智能指针2.txt",
     "2_C++/C++相关资料/智能指针1.txt",
