@@ -1,0 +1,55 @@
+#include <iostream>
+#include<string>
+#include<memory>
+using namespace std;
+
+// 智能指针  万物节课对象   指针封装  --> 类  构造 析构 --> 回收指针所指向的空间
+// 自动回收空间
+
+// std  四个智能指针  auto_ptr c++98标准以后  unique_ptr  shared_ptr  weak_ptr
+// C++ boost
+
+class AAAA
+{
+public:
+    AAAA( const string str){ s = str; cout<<"AAAA:"<< s << endl;}
+    ~AAAA(){ cout<<"~AAAA" << endl;}
+    void say(){ cout<<"say:"<< s << endl;}
+private:
+    string s;
+};
+
+// shared_ptr 存在的问题 : 循环引用, 导致空间不释放
+// weak_ptr  弱引用计数的共享使用权的智能指针
+// weak_ptr 指向同一空间 引用计数不会加1
+// 使用和shared_ptr 类似
+class CCCC;
+class BBBB
+{
+public:
+	BBBB(){ cout<<"BBBB"<<endl;}
+	~BBBB(){cout<<"~BBBB"<<endl;}
+	shared_ptr<CCCC> spc;
+};
+
+class CCCC
+{
+public:
+	CCCC(){ cout<<"CCCC"<<endl;}
+	~CCCC(){cout<<"~CCCC"<<endl;}
+	//shared_ptr<BBBB> spb;
+	weak_ptr<BBBB> spb;
+};
+
+
+int main()
+{
+	{
+		shared_ptr<BBBB> pb( new BBBB( ) );
+		shared_ptr<CCCC> pc( new CCCC( ) );
+		pb->spc = pc;
+		pc->spb = pb;
+	}
+	return 0;
+}
+

@@ -1,0 +1,70 @@
+#include<iostream>
+
+using namespace std;
+
+//什么是内部类?
+//如果一个类B定义在另一个类A的内部，这个类B就叫做内部类。类A叫外部类
+
+//性质
+//内部类是独立的, 不属于外部类, 更不能通过外部类的对象去调用内部类
+//内部类就是外部类的友元类, 内部类可以通过外部类的对象来访问外部类中的所有成员
+//外部类不是内部类的友元
+
+//注意
+//1.内部类可以定义在外部类的public、protected、private都是可以的。
+//如果内部类定义在public，则可通过 外部类名::内部类名 来定义内部类的对象。
+//2.内部类可以直接访问外部类中的static、枚举成员，不需要外部类的对象/类名。
+//3.内部类可以在外部类类外定义
+//4.sizeof(外部类)=外部类，和内部类没有任何关系
+//5.定义堆区内部类对象的方法 outer::inner * pi = new outer::inner;
+
+
+
+class outer
+{
+public:
+	class inner{
+	public:
+		void say( outer* p){
+			cout << p->a <<endl;//可以访问因为内部类是外部类的友元类
+			cout << s <<endl; // 可以直接访问外部类的static成员不用类名和对象
+		}
+	private:
+		int i;
+	};
+	void speak( inner * ie){
+		//cout << ie->i <<endl;//外部类不是内部类的友元类,不可访问
+	}
+private:
+	int a;
+	static int s;
+	class private_inner;
+};
+
+//内部类可以在类外定义
+class outer::private_inner{
+		public:
+		void say( outer* p){
+			cout << p->a <<endl;//可以访问因为内部类是外部类的友元类
+		}
+	private:
+		int i;
+};
+
+
+int main()
+{
+	outer o;
+
+	outer::inner ir;
+//	outer::private_inner pi; // 不可定义外部类对象
+
+	//在堆中创建内部类
+	outer::inner * pi = new outer::inner;
+	delete pi;
+
+	cout << sizeof( o ) <<endl; //结果4  内部类是类型不占空间
+
+	getchar();
+	return 0;
+}

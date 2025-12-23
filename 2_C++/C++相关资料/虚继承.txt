@@ -1,0 +1,63 @@
+#include<iostream>
+
+using namespace std;
+
+//虚继承
+//主要解决在多重继承中的菱形继承问题
+
+//虚继承特性
+
+//1.父类和子类在空间上一种倒置关系(与普通继承相比) 
+//2.子类有特有的虚函数, 会有自己的虚表 , 就会有自己的虚指针.  class B 有两个虚表.  
+//3.子类存在指向虚基类(虚继承里面的基类 )的虚基表  , 子类会有虚基表的指针 vbptr
+//它指向这个虚基表 , 虚基表里面的内容是指向自己及虚基类的地址偏移量
+//4.最底层的子类, 完成虚基类的构造
+
+
+class Base
+{
+public: Base( int i){ cout << "B()"<<endl;}
+		virtual void vfun(){}
+		int a;
+};
+class Base1:virtual public Base
+{
+public: Base1( int i): Base(i){ cout << "B1()"<<endl;}
+		virtual void vfun1(){}
+		int b;
+};
+class Base2:virtual public Base
+{
+public: Base2( int i): Base(i){ cout << "B2()"<<endl;}
+		virtual void vfun2(){}
+		int c;
+};
+class Derived1: public Base1,  public Base2
+{
+public:
+	Derived1( int i):Base1(i) , Base2(i), Base(i){ cout << "D1()"<<endl;}
+	virtual void vfun3(){}
+	int d;
+};
+class Derived2: virtual public Base1,  virtual public Base2
+{
+public:
+	Derived2( int i):Base1(i) , Base2(i), Base(i){ cout << "D2()"<<endl;}
+	virtual void vfun4(){}
+	int e;
+};
+
+int main()
+{
+	Derived1 d1(1);
+	Derived2 d2(1);
+
+	Derived2* pd2 =&d2;
+
+	Base1 b1(1);
+	Base1* pb1 =&b1;
+
+
+	getchar();
+	return 0;
+}

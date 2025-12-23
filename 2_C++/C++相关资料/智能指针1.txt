@@ -1,0 +1,129 @@
+#include <iostream>
+#include<string>
+#include<memory>
+using namespace std;
+
+class AAAA
+{
+public:
+    AAAA( const string str){ s = str; cout<<"AAAA:"<< s << endl;}
+    ~AAAA(){ cout<<"~AAAA" << endl;}
+    void say(){ cout<<"say:"<< s << endl;}
+private:
+    string s;
+};
+
+class CCCC;
+class BBBB
+{
+public:
+	BBBB(){ cout<<"BBBB"<<endl;}
+	~BBBB(){cout<<"~BBBB"<<endl;}
+	shared_ptr<CCCC> spc;
+};
+
+class CCCC
+{
+public:
+	CCCC(){ cout<<"CCCC"<<endl;}
+	~CCCC(){cout<<"~CCCC"<<endl;}
+	//shared_ptr<BBBB> spb;
+	weak_ptr<BBBB> spb;
+};
+
+
+int main(int argc, char *argv[])
+{
+
+    //auto_ptr  定义对象
+	{
+		auto_ptr<AAAA> ap1( new AAAA("auto_ptr") );
+
+		auto_ptr<AAAA> ap2;
+		ap2.reset( new AAAA("auto_ptr2") ); // 先清空原来的 然后再set新的
+
+		//自动回收 效果已经有了
+		auto_ptr<AAAA> ap3;
+		ap3 = ap1;
+
+		ap3->say();
+
+		// 判断是否空指针
+		if( ap1.get() == NULL )
+		{
+			cout << "null pointer" <<endl;
+		}
+		//cout<<"-------release--------------"<<endl;
+		//ap3.release();  //是赋值空  ap3 = NULL;
+		//if( ap3.get() == NULL )
+		//{
+		//	cout << "null pointer" <<endl;
+		//}else
+		//{
+		//	cout << "ap3 pointer" <<endl;
+		//}
+		cout<<"---------reset-------------"<<endl;
+		ap3.reset(); // 析构
+		if( ap3.get() == NULL )
+		{
+			cout << "null pointer" <<endl;
+		}
+	}
+	cout  << "/////////////////////////////////////"<<endl;
+
+	// unique_ptr : 唯一的所有权
+	{
+		//初始化 
+		unique_ptr<AAAA> up1( new AAAA("unique_ptr") );
+
+		unique_ptr<AAAA> up2;
+		up2.reset( new AAAA("unique_ptr2") );
+
+		// 使用权交换
+		unique_ptr<AAAA> up3;
+		up3 = std::move( up1 );
+
+		//up3->say();
+		up3.get()->say();  //与上面的一样
+
+		if( up1 == NULL )
+			cout << "NULL pointer"<<endl;
+		else
+			up1->say();
+
+	//	release  reset
+
+	}
+	cout << "//////////////////////"<<endl;
+
+	//  shared_ptr  共享所有权的智能指针  多个指向指向同一个堆空间 通过引用计数, 来记录有所有权的指针个数
+	//  当引用计数为0时 , 回收这个堆空间  use_counts
+	{
+		//定义对象
+		shared_ptr<AAAA> sp1( new AAAA("shared_ptr1"));
+
+		shared_ptr<AAAA> sp2;
+		sp2.reset( new AAAA("shared_ptr2") );
+
+		shared_ptr<AAAA> sp3;
+		sp3 = make_shared <AAAA>("shared_ptr3");
+		{
+			shared_ptr<AAAA> sp4;
+			sp4 = sp3; // 指向同一个  共享
+			cout<< sp4.use_count() << endl;
+		}
+		cout<< sp3.use_count() << endl;
+		sp3->say();
+
+		sp3.reset();
+		cout<< sp3.use_count() << endl;
+
+		//if(  sp3 == NULL )
+		//{
+		//}
+	}
+
+
+	getchar();
+	return 0;
+}

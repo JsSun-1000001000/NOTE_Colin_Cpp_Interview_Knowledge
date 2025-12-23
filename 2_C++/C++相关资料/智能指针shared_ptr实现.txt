@@ -1,0 +1,104 @@
+#include<iostream>
+
+using namespace std;
+
+//引用计数的实现
+template<class T>  //class -> typename
+class Counter  //是智能指针的成员
+{
+private:
+	T * ptr;  //共用的堆区空间
+	int cnt; //引用计数
+	
+	//加智能指针可以使用私有的友元
+	template<class T>
+	friend class myshared_ptr;
+	
+	Counter( T* p) {
+		ptr = p;
+		cnt = 1;
+	}
+	~Counter( ){
+		delete ptr; //方便回收堆区空间
+	}
+};
+
+//智能指针实现
+template<class T>
+class myshared_ptr
+{
+private:
+	Counter<T> *ptr_cnt; // 引用计数的指针
+public:
+	myshared_ptr( T*p ) //从智能指针的使用考虑  
+	{
+		ptr_cnt  = new Counter<T>( p );
+	}
+	//拷贝构造 拷贝构造的时候 引用计数 +1 
+	myshared_ptr( const myshared_ptr & sptr )    //因为共用 浅拷贝 
+	{
+		 ptr_cnt = sptr . ptr_cnt;
+		 ptr_cnt->cnt ++;
+	}
+	//赋值的重载操作符  A = B;   A原来对应的空间 引用计数-- (判断归0) B原来的空间引用计数++
+	myshared_ptr&  operator= ( const myshared_ptr & sptr )     
+	//赋值之后 A指向的空间变为B指向的空间.
+	{
+		//判断是不是自己  引用计数不动
+		if( this == &sptr )  return *this; //返回对象自己
+		this->ptr_cnt->cnt--;
+		if( this->ptr_cnt->cnt == 0 ) delete ptr_cnt;
+		ptr_cnt = sptr .ptr_cnt;//赋值之后 A指向的空间变为B指向的空间.
+		sptr .ptr_cnt->cnt++;
+		return *this;
+	}
+	//析构   引用计数-1 , 判断当引用计数归0 , 回收空间
+	~myshared_ptr(){
+		ptr_cnt->cnt--;
+		if( ptr_cnt->cnt == 0) delete  ptr_cnt;
+	}
+	int use_count(){  return ptr_cnt->cnt; }
+	T* get() {
+		return  ptr_cnt->ptr;
+	}
+};
+
+//智能指针 不能保证 申请的堆空间的线程安全 要保证引用计数的线程安全 
+//原子锁  InterLockedIncrement( &(ptr_cnt->cnt));   +1的原子锁
+// InterLockedDecrement( &(ptr_cnt->cnt));   -1的原子锁
+
+class AA
+{
+public:
+	AA( string str ){
+		this->str= str;
+		cout << "AA(str):"<< str.c_str()<<endl; 
+	}
+	void say(){
+		cout << str.c_str()<<endl; 
+	}
+	~AA(){
+		cout << "~AA()" << endl;
+	}
+private:
+	string str;
+};
+
+int main()
+{
+	{
+		myshared_ptr<AA> sptr1( new AA("AA1"));
+		cout << "AA1 use_count:"<<sptr1.use_count() <<endl;
+		{
+			myshared_ptr<AA> sptr2 = sptr1;
+			cout << "AA1 use_count:"<<sptr1.use_count() <<endl;
+			cout << "AA1 use_count:"<<sptr2.use_count() <<endl;
+		}
+		cout << "AA1 use_count:"<<sptr1.use_count() <<endl;
+
+		sptr1.get()->say();
+	}
+
+	getchar();
+	return 0;
+}
