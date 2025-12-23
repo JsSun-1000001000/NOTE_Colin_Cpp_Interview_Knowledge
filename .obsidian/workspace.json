@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "71b1c68d38494a6d",
+        "id": "80ec29c88993020c",
         "type": "tabs",
         "children": [
           {
-            "id": "c9533fc5c0a65520",
+            "id": "b036ab896d0f5335",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 233.5
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -195,9 +196,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c9533fc5c0a65520",
+  "active": "b036ab896d0f5335",
   "lastOpenFiles": [
     "2_C++/Cpp1、C++11线程&3种锁.md",
+    "未命名.canvas",
+    "2025-12-23.md",
+    "2_C++/C++相关资料/STL源码剖析.pdf",
+    "1_C/C8、C习题1.md",
     "1_C/C9、C习题2.md",
     "2_C++/C++相关资料/智能指针shared_ptr实现.txt",
     "2_C++/C++相关资料/智能指针2.txt",
@@ -207,10 +212,8 @@
     "2_C++/C++相关资料/内部类.txt",
     "2_C++/C++相关资料/大话设计模式(带目录完整版).pdf",
     "2_C++/C++相关资料/type_cast.txt",
-    "2_C++/C++相关资料/STL源码剖析.pdf",
     "2_C++/C++相关资料/STL—迭代器.docx",
     "2_C++/C++相关资料/C++内存泄露检查的5个方法.png",
-    "1_C/C8、C习题1.md",
     "1_C/C7、printf实现.md",
     "1_C/C6、C语言复习3-2.md",
     "1_C/C相关资料/四区五段.png",
