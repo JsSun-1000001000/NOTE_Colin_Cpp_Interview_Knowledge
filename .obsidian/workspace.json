@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "80ec29c88993020c",
+        "id": "9b7f2a386870af3a",
         "type": "tabs",
         "children": [
           {
-            "id": "b036ab896d0f5335",
+            "id": "aa59527de29bae87",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "6_操作系统/相关资料/操作系统/操作系统/内存/内存管理-段式页式段页式_files/0.312489779022465.png"
+                "file": "6_操作系统/操作系统1-1.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "0.312489779022465"
+              "icon": "lucide-file",
+              "title": "操作系统1-1"
             }
           }
         ]
@@ -178,7 +180,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.5
+    "width": 205.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -192,8 +195,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "34583f1d86c711fd",
+  "active": "aa59527de29bae87",
   "lastOpenFiles": [
+    "6_操作系统/操作系统1-1.md",
+    "6_操作系统/相关资料/线程不同状态间的切换.png",
+    "6_操作系统/相关资料/操作系统/操作系统/内存/内存管理-段式页式段页式_files/0.312489779022465.png",
     "6_操作系统/相关资料/Linux系统/linux/linux/软硬链接_files/20190908104116277.jpg",
     "6_操作系统/相关资料/Linux系统/linux/linux/软硬链接_files",
     "6_操作系统/相关资料/Linux系统/linux/linux/用户态和内核态区别_files/dba7d4ec-016e-433e-887f-fcb15dc2f7cc.png",
@@ -204,9 +210,6 @@
     "6_操作系统/相关资料/Linux系统/linux/linux/四、文件操作_files/f0e89bf1-9e7c-4811-ac7e-d47f21583fba.png",
     "6_操作系统/相关资料/Linux系统/linux/linux/四、文件操作_files/e1b95e17-2ca2-4995-9da1-7ccc79035005.png",
     "6_操作系统/相关资料/Linux系统/linux/linux/四、文件操作_files/e555e15d-b9f7-4f52-8c48-1da2595fcf5e.png",
-    "6_操作系统/相关资料/Linux系统/linux/linux/四、文件操作_files/c4c0d4e2-1e55-4f7b-b918-8435de0ec292.png",
-    "6_操作系统/相关资料/Linux系统/linux/linux/四、文件操作_files/b4bdd965-2b41-436a-8aa9-2136e2e61440.png",
-    "6_操作系统/相关资料/Linux系统/linux/linux/四、文件操作_files/5d2325ba-39c4-4e87-89c7-e9a90a83203f.png",
     "6_操作系统/相关资料/Linux系统/linux/linux/四、文件操作_files",
     "6_操作系统/相关资料/Linux系统/linux/linux/二、和网络有关的命令_files",
     "6_操作系统/相关资料/Linux系统/linux/linux/三、进程和内存相关命令_files",
@@ -239,7 +242,6 @@
     "9_面试算法/算法资料/8、面试算法—动态规划专题.md",
     "9_面试算法/算法资料/7、面试算法—贪心（区间问题）专题.md",
     "3,10.md",
-    "9_面试算法/算法资料/6、面试算法—回溯专题.md",
-    "9_面试算法/算法资料/5、面试算法—数学专题.md"
+    "9_面试算法/算法资料/6、面试算法—回溯专题.md"
   ]
 }
