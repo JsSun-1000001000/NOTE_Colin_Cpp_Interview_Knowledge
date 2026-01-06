@@ -1,0 +1,109 @@
+#pragma once 
+
+
+#include<iostream>
+#include<unordered_map>
+
+using namespace std;
+
+//双向链表 + 哈希表
+//get 没有返回-1  有移动到头 返回value
+//put 有 移动到头 覆盖值  没有 看容量是否满, 满了 尾删除 头添加
+
+struct DLinkedNode
+{
+	int key ,value;
+	DLinkedNode * prev;
+	DLinkedNode * next ;
+	DLinkedNode( int _key , int _value ):key(_key),value(_value),
+		prev(0) , next(0){
+		
+	}
+};
+
+class LRUCache {
+public:
+	LRUCache(int capacity) :size( 0 ) , capacity( capacity ){
+		//需要创建伪装的头尾
+		head = new DLinkedNode( 0 , 0);
+		tail = new DLinkedNode( 0 , 0);
+		head->next = tail;
+		tail->prev = head;
+    }
+ //get 没有返回-1  有移动到头 返回value
+    int get(int key) {
+		// 哈希表查看有没有  count( key ) > 0 
+		if( !cache.count(key) ) return -1;
+		DLinkedNode* node = cache[key];
+		moveToHead( node );
+		return node->value;
+    }
+ //put 有 移动到头 覆盖值  没有 看容量是否满, 满了 尾删除 头添加   
+    void put(int key, int value) {
+		//看是否命中
+		if( cache.count(key ) > 0 ){
+			DLinkedNode* node = cache[key];
+			node->value = value;
+			moveToHead( node );
+		}else{
+			if( size >= capacity ){
+				//超出 要删除
+				DLinkedNode* rNode =  removeTail();
+				//delete  此外 hash表也要移除
+				cache.erase( rNode->key );
+				delete rNode;
+				size--;
+			}
+			//创建节点
+			DLinkedNode*  node = new DLinkedNode( key , value);
+			//需要加到 哈希表
+			cache[key] = node;
+			//添加到双向链表
+			addToHead(node);
+			//个数++
+			size++;
+		}
+    }
+private:
+	//参数 node节点 都是哈希表确认的 
+	void moveToHead(DLinkedNode *node){ //移动到头 
+		//移除节点 从原来链表移除
+		removeNode( node );
+		//头添加
+		addToHead( node );
+	}
+	void addToHead( DLinkedNode *node ){//头添加
+		//先连后继 
+		node->next = head->next;
+		node->prev = head;
+		//再连前驱
+		head->next->prev =  node;
+		head->next = node;
+	}
+	void removeNode( DLinkedNode *node ){//移除节点 从原来链表移除
+		//先连后继 
+		node->prev->next = node->next;
+		//再连前驱
+		node->next->prev = node->prev;
+	}
+	DLinkedNode * removeTail( ){//尾删除
+		DLinkedNode * tmp = tail->prev ;
+		removeNode( tmp );
+		return tmp;
+	}
+
+	unordered_map< int , DLinkedNode* > cache;  //key  , 节点地址
+
+	DLinkedNode* head;
+	DLinkedNode* tail;
+
+	int size;  //元素个数
+	int capacity; //容量
+};
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache* obj = new LRUCache(capacity);
+ * int param_1 = obj->get(key);
+ * obj->put(key,value);
+ */
