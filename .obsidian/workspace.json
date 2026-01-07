@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "5_网络/网络复习1-1.md",
+                "file": "2_C++/Cpp8、C++复习4-2设计原则.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "网络复习1-1"
+              "title": "Cpp8、C++复习4-2设计原则"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -197,9 +198,10 @@
   },
   "active": "aa59527de29bae87",
   "lastOpenFiles": [
+    "5_网络/网络复习1-1.md",
+    "2_C++/Cpp8、C++复习4-2设计原则.md",
     "5_网络/相关资料/输入网址到显示界面.png",
     "6_操作系统/操作系统1-1.md",
-    "5_网络/网络复习1-1.md",
     "1_C/C5、C语言复习3-1.md",
     "5_网络/相关资料",
     "1_C/C4、C语言复习2-2.md",
@@ -218,7 +220,6 @@
     "6_操作系统/相关资料/Linux系统/linux/linux/四、文件操作_files/f9326d2f-30db-4ab6-a4a4-73b55ad0a5be.png",
     "6_操作系统/相关资料/Linux系统/linux/linux/四、文件操作_files/f0e89bf1-9e7c-4811-ac7e-d47f21583fba.png",
     "6_操作系统/相关资料/Linux系统/linux/linux/四、文件操作_files/e1b95e17-2ca2-4995-9da1-7ccc79035005.png",
-    "6_操作系统/相关资料/Linux系统/linux/linux/四、文件操作_files/e555e15d-b9f7-4f52-8c48-1da2595fcf5e.png",
     "6_操作系统/相关资料/Linux系统/linux/linux/四、文件操作_files",
     "6_操作系统/相关资料/Linux系统/linux/linux/二、和网络有关的命令_files",
     "6_操作系统/相关资料/Linux系统/linux/linux/三、进程和内存相关命令_files",
