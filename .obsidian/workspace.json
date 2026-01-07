@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "malloc",
+                "query": "对齐",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -197,8 +198,9 @@
   },
   "active": "aa59527de29bae87",
   "lastOpenFiles": [
-    "2_C++/CppZ、C++11线程&3种锁.md",
+    "2_C++/讲解图片/抽象工厂模式.png",
     "2_C++/Cpp9、C++复习4-2设计模式.md",
+    "2_C++/CppZ、C++11线程&3种锁.md",
     "1_C/C6、C语言复习3-2.md",
     "2_C++/讲解图片/工厂方法模式.png",
     "2_C++/讲解图片/简单工厂四则运算.png",
@@ -220,7 +222,6 @@
     "1_C/C1、动员&学习方法.md",
     "2_C++/Cpp1、C++复习1-1.md",
     "6_操作系统/相关资料/线程不同状态间的切换.png",
-    "6_操作系统/相关资料/操作系统/操作系统/内存/内存管理-段式页式段页式_files/0.312489779022465.png",
     "6_操作系统/相关资料/Linux系统/linux/linux/软硬链接_files",
     "6_操作系统/相关资料/Linux系统/linux/linux/用户态和内核态区别_files",
     "6_操作系统/相关资料/Linux系统/linux/linux/四、文件操作_files",
