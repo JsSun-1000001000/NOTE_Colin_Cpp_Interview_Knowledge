@@ -61,3 +61,5 @@ private:
 - 写一个四则运算，使用工厂模式
 - 运算类：运算数A、运算数B、virtual int GetResult()
 
+![[简单工厂四则运算.png]]
+## 工厂方法模式
