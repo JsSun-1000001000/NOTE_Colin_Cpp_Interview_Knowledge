@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "析构函数",
+                "query": "深拷贝",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,11 +74,13 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 269.5
+    "width": 269.5,
+    "collapsed": true
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -197,14 +199,14 @@
   },
   "active": "aa59527de29bae87",
   "lastOpenFiles": [
-    "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf",
+    "2_C++/Cpp1、C++复习1-1.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
+    "2_C++/Cpp2、C++复习1-2.md",
+    "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf",
     "6_操作系统/操作系统1-1.md",
     "5_网络/网络复习1-1.md",
     "2_C++/CppZ、C++11线程&3种锁.md",
     "2_C++/Cpp9、C++复习4-2设计模式.md",
-    "2_C++/Cpp2、C++复习1-2.md",
-    "2_C++/Cpp1、C++复习1-1.md",
     "2_C++/Cpp8、C++复习4-2设计原则.md",
     "1_C/C2、C语言复习1.md",
     "1_C/C1、动员&学习方法.md",
