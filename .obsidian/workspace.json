@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_C++/Cpp8、C++复习4-2设计原则.md",
+                "file": "2_C++/Cpp9、C++复习4-2设计模式.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cpp8、C++复习4-2设计原则"
+              "title": "Cpp9、C++复习4-2设计模式"
             }
           }
         ]
@@ -197,8 +197,8 @@
   },
   "active": "aa59527de29bae87",
   "lastOpenFiles": [
-    "2_C++/Cpp9、C++复习4-2设计模式.md",
     "2_C++/Cpp8、C++复习4-2设计原则.md",
+    "2_C++/Cpp9、C++复习4-2设计模式.md",
     "2_C++/讲解图片/合成复用原则.png",
     "2_C++/讲解图片/迪米特原则.png",
     "2_C++/讲解图片/接口隔离原则.png",
