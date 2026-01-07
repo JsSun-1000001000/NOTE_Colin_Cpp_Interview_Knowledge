@@ -102,7 +102,16 @@ private:
 中介二字：
 网络和核心类之间的交互，通过网络中介进行交互
 
+![[终结者模式类图.png]]
+
 **优点：**
-- 降低耦合度，对象只需要依赖中介者
+- <span style="background:#affad1">降低耦合度，对象只需要依赖中介者，而非直接相互依赖</span>。这使得系统更易于维护和扩展
+- <span style="background:#affad1">集中控制交互逻辑</span>，对象间的交互逻辑被集中在中介者中，便于统一管理和修改
+- 符合开闭原则，新增具体同事类或中介者类时，<span style="background:#affad1">通常不需要修改现有代码，只需要扩展即可。</span>
+- 简化对象协议，对象之间的通信被简化为中介者的通信，<span style="background:#affad1">减少了信息传递的复杂性</span>
 **缺点：**
+- <span style="background:#affad1">中介者可能过于复杂</span>，当系统中的交互逻辑较多时，中介者会变得庞大复杂，
+- 降低对象可复用性，<span style="background:#affad1">对象的行为依赖中介者</span>，导致调试时难以定位问题
+- 调试难度增加，中介者集中了大量逻辑，可能导致调试时候难以定位问题。
+- 可能导致性能问题，所有交互都通过中介者进行，可能在<span style="background:#affad1">高并发场景下成为性能瓶颈</span>
 
