@@ -210,29 +210,50 @@
 > ```
 > 【挖坑：Lambda表达式中修改按值捕获的变量】
 
+> [!NOTE] const修饰到底存哪里？
+> 全局const：在只读数据段`.rodata`（常量区），只读的，存储常量数据
+> 局部const：存在栈上，~~编译器可能优化为直接内联到指令中~~
+> 
+> 其实不一定存储在只读段的，和编译器有很大关系，不考虑了
+
+> [!NOTE] const常量折叠
+> Contents
+
 [深入解析 const 关键字：指针、参数、返回值和类成员函数_const关键字-CSDN博客](https://blog.csdn.net/Dreaming_TI/article/details/133646406)
 [C语言volatile关键字的作用 - C语言中文网](https://c.biancheng.net/view/2iie2p.html)
 [C++ 关键字mutable、decltype详解-CSDN博客](https://blog.csdn.net/qq_15181569/article/details/156455810)
+[`const`修饰的变量存储位置在哪？\_编程语言-CSDN问答](https://ask.csdn.net/questions/8590719)
+[C++高级进阶 第四季：const详解（二） 常量折叠_const 的机制,就是在编译期间,用一个常量代替了 data。这种方式叫做常量折叠。-CSDN博客](https://blog.csdn.net/scythe666/article/details/50959579)
 ### 15. 指针和引用的区别？
 
+面试思路：
+##### <span style="background:#affad1">初始化给初值吗——>能改吗——>占空间吗——>能为空吗——>能二级吗——>能引用指针吗</span>
+
+笔记：
 - ==**初始化**==是否给初值？指针可以不初始化，引用必须初始化
 - 是否可以==**改变**==？指针初始化后可以再改，引用不可以改
 - 是否==**占用空间**==？指针占用空间，存储的是地址；引用是别名，不占用空间
 - 是否==**可以为空**==？指针可以指向空，引用不可以为空
 - ==**二级**==？指针可以二级，引用不可以（==注意：&&不是二级引用，是右值引用，C++11新特性==）
+- **补充：只有指针的引用，没有引用的指针**
 
 指针的引用：修饰什么紧跟着什么
 `int * & p = a;`正确
 `int & * p = a;`错误
-
-**补充：只有指针的引用，没有引用的指针**
 ### 16. 内存泄漏和内存溢出的区别？ 
+面试思路：
+##### <span style="background:#affad1">没有释放是哪个——>没有空间是那个——>谁会导致谁</span>
 
+笔记：
 - 内存溢出 ，是指程序在申请内存时，==没有足够的内存空间供其使用==。
 - 内存泄露，是指程序在申请内存后，==没有释放已申请的内存空间==。
 - **补充：泄露会导致溢出**
 ### 17. STL容器（vector、list、deque、set、map）的基本特性？ 
 
+面试思路：
+##### <span style="background:#affad1">STL由哪六部分组成——>这些容器是什么类型的容器，底层是什么</span>
+
+笔记：
 - STL六大组成部分有：==容器、算法、迭代器、仿函数、适配器、空间配置器
 - vector是序列型容器，动态扩容数组
 - list是序列型容器，双向循环链表
@@ -241,11 +262,17 @@
 - map是关系型容器，红黑树
 ### 18. STL迭代器的种类及使用场景？ 
 
-- ==**输入迭代器：**==istream_iterator
-- ==**输出迭代器：**==ostream_iterator
-- ==**前向迭代器：**==find、replace
-- ==**双向迭代器：**==reverse、rotate
-- ==**随机访问迭代器：**==vector、deque、array（C++11固定大小的数组容器）的迭代器
+面试思路：
+##### <span style="background:#affad1">哪五种——>什么场景</span>
+
+笔记：
+- ==**输入迭代器：**== istream_iterator；作用：输入流中读数据，文件/标准输入
+- ==**输出迭代器：**== ostream_iterator；作用：写入输出流，文件/标准输出
+- ==**前向迭代器：**== Forward Iterators；遍历/修改容器中元素，find/replace
+- ==**双向迭代器：**== Bidirectional Iterators；向前后遍历，reverse/rotate
+- ==**随机访问迭代器：**== Random Access Iterators；容器中快速访问，sort/binary_search 
+- 
+vector、deque、array（C++11固定大小的数组容器）的迭代器
 
 [深入理解C++ STL迭代器：五种迭代器类别及其应用](https://cloud.baidu.com/article/3310758)
 ### 19. C++中的四种cast转换（static_cast、dynamic_cast、const_cast、reinterpret_cast）区别？ 
