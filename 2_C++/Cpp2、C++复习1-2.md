@@ -151,4 +151,144 @@ A& operator = (const A& a){
 	return *this;
 }
 ```
+
 实现string类
+
+**空类中一定包含的函数：**
+- 默认无参构造函数
+- 析构函数
+- 拷贝构造
+- =重载操作符（赋值）
+- &重载操作符（取址）
+
+```cpp
+class A{
+};sizeof(A)
+
+sizeof(A) = 1;
+```
+
+**哪些函数不能被virtual关键字修饰？**
+- 构造函数
+- 拷贝构造函数
+- 静态函数static
+- 友元函数friend
+- 类外的普通函数
+- 内联函数inline（已经生效的）
+
+> [!NOTE] operator重载操作符可以被virtual修饰吗？
+> 可以，不多见
+> - 子类要重定义父类虚函数，参数必须为父类引用类型，否则与父类中虚函数是完全不同的，不能进行预期动态绑定
+> - 子类除了重定义父类的虚操作符，还要定义自身的操作符重载
+> ```cpp
+> #include <iostream>
+> using namespace std;
+> 
+> class Base{
+> public:
+> 	virtual Base& operator = (const Base& rhs){
+> 		cout<<"base"<<endl;
+> 		return *this;
+> 	}
+> };
+> class Derived : public Base{
+> public:
+> 	//与父类operator完全不同 不是重新定义 不会动态绑定
+> 	//如果不定义该操作符，会自动合成一个，并自动调用基类operator不会动态绑定
+> 	Derived& operator=(const Derived& rhs){
+> 		cout<<"Derived_D"<<endl;
+> 		return *this;
+> 	}
+> 	//重新定义父类operator 会动态绑定
+> 	//virtual Base& operator = (const Base& rhs)返回值两种都可
+> 	virtual Derived& operator = (const Base& rhs){
+> 		cout<<"Derived_B"<<endl;
+> 		return *this;
+> 	}
+> };
+> class Derived2 : public Derived{
+> 	//需要3个operator
+> 	//可定义private的copy函数，由3个operator=调用
+> 	//可使用dynamic_cast将基类引用参数转为子类，并捕获异常
+> 	//如果未发生异常，则调用copy，发生异常则不需赋值
+> }
+> int main(){
+> 	Base b1, b2;   
+> 	Derived d1, d2;   
+>                            
+> 	Derived &rd = d1;   
+>                               
+> 	Base &rb1 = b1;  //动态类型为Base   
+> 	Base &rb2 = d2;  //动态类型为Derived   
+>                                
+> 	rb1 = d1;  //输出"Base"   
+> 	rb2 = d2;  //输出"Derived_B"   
+>                            
+> 	rb1 = rb2;  //输出"Base"   
+> 	rb2 = rb1;  //输出"Derived_B"   
+>                            
+> 	rd = d1;  //输出"Derived_D"   
+> 	rd = b1;  //输出"Derived_B"   
+>                                
+> 	getchar();   
+> 	return 0;
+> }
+> ```
+
+## 类之间的关系
+
+分两个方向：横向/纵向
+AD—ACG
+**横向：**
+- 组合 Composition（不可分割组成部分）
+- 依赖 Dependency（完成功能借助的工具）
+- 关联 Association（指针的成员，类似于朋友，一个类知道另一类的属性和方法）
+- 聚合 Aggregation（班级和班级的学生，整体和可以离开整体的个体）
+
+**纵向：**
+- 继承 Generalization（父类的成员方法和属性复制一份给子类用，各用各的）
+
+## 继承方式
+
+结构体默认public继承
+
+|        继承方式        |    父类public属性     |    父类protected属性     |  父类private属性  |
+| :----------------: | :---------------: | :------------------: | :-----------: |
+|   公有继承<br>public   |  public->public   | protected->protected | private->不可访问 |
+| 受保护继承<br>protected | public->protected | protected->protected | private->不可访问 |
+|  私有继承<br>private   |  public->private  |  protected->private  | private->不可访问 |
+## 多态Dynamic polymorphism——相同行为方式导致不同行为结果
+
+[[1、C_C++#20. 面向对象的三大特性（封装、继承、多态）？]]
+[[1、C_C++#21. 多态的实现原理（虚函数表）？]]
+### 多态是什么？
+
+相同行为方式导致不同行为结果
+### 多态有哪些种？
+
+静态多态 和 动态多态
+- 静态多态：在==编译期==确定（执行什么函数），可以==通过函数重载，函数模板来实现==静态多态（两种静态多态）
+- 动态多态：在==运行时==确定（运行时多态），通过==继承和虚函数==实现动态多态，动态体现在
+
+[面试官：说说多态的实现机制-虚函数、函数指针以及变体 - 知乎](https://zhuanlan.zhihu.com/p/677049103)
+### 多态的实现（底层机制）
+
+动态多态的时候，需要去对象的前四个字节里拿虚指针，里面装的虚函数表（Virtual Table—vbtl）的入口地址，在运行后才会有虚表，会加载到内存里，创建的对象才会能找到虚指针拿到虚表
+
+静态多态在编译时，就写好函数指针地址了。
+
+**虚指针**——指向虚函数列表的指针，虚函数是==对象的前四个字节（有的编译器有差别）==，通过提取前四个字节，就能找到虚函数数组的入口点
+
+**对象**——物理内存
+
+**动态多态的具体实现过程？**
+- 父类要有虚函数，父类就有一个虚函数表
+- 子类继承父类，子类就有一个虚函数表——若子类重写虚函数就会覆盖虚函数表里面的虚函数地址
+- 准备工作完了，定义子类对象，子类对象前4个字节就会有一个虚指针，虚指针指向虚函数表，父类指针指向子类对象
+- 父类指针调用虚函数，就会根据子类对象的前四个字节，得到虚指针，进而得到虚函数表的入口地址，通过遍历虚函数表，找到对应的虚函数并调用，从而完成多态
+
+**C里实现多态？**
+- 通过结构体和指针
+
+**当调用虚函数/普通函数的时候，怎么确定是调父类的还是调子类的？**
+- 首先看调用的是不是虚函数，是虚函数，看对象的虚函数表有没有重写；是普通函数，看指针类型是父类还是子类的，到相应的类型里面执行
