@@ -54,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "深拷贝",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -75,8 +75,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -182,8 +181,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.5,
-    "collapsed": true
+    "width": 205.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,12 +195,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a0cdc7d0fa1cc752",
+  "active": "3dcee5ca980188d2",
   "lastOpenFiles": [
-    "2_C++/Cpp4、C++11复习2-2.md",
-    "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
-    "2_C++/Cpp3、C++复习2-1.md",
+    "2_C++/Cpp9、C++复习4-2设计模式.md",
     "2_C++/Cpp8、C++复习4-2设计原则.md",
+    "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
+    "2_C++/Cpp4、C++11复习2-2.md",
+    "2_C++/Cpp3、C++复习2-1.md",
     "1_C/C6、C语言复习3-2.md",
     "2_C++/Cpp2、C++复习1-2.md",
     "1_C/C5、C语言复习3-1.md",
@@ -214,7 +213,6 @@
     "2_C++/Cpp1、C++复习1-1.md",
     "2_C++/讲解图片/手写实现多态.jpg",
     "5_网络/网络复习1-1.md",
-    "2_C++/Cpp9、C++复习4-2设计模式.md",
     "2_C++/C++相关资料/c++思维导图.png",
     "欢迎.md",
     "Pasted image 20260108100741.png",
