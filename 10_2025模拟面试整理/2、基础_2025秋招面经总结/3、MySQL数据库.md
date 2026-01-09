@@ -44,12 +44,52 @@
 
 笔记：
 
+|     特性     |             InnoDB             |           MyISAM            |
+| :--------: | :----------------------------: | :-------------------------: |
+|  **事务支持**  |          支持事务，ACID兼容           |            不支持事务            |
+|  **锁机制**   |              行级锁               |             表级锁             |
+|  **外键支持**  |             支持外键约束             |             不支持             |
+|  **崩溃恢复**  | 支持崩溃恢复（通过 redo log 和 undo log） |             不支持             |
+|   **性能**   |          高并发、写操作较多时更优          |         读取操作较多时，性能好         |
+|  **存储格式**  |      存储为表空间，支持表空间和独立文件存储       | 每个表使用三个文件（.frm, .MYD, .MYI） |
+|  **表的大小**  |        支持大表，能有效管理大型数据表         |           对大表支持有限           |
+|  **全文索引**  |        从 MySQL 5.6 起支持         |          原生支持全文索引           |
+| **磁盘空间使用** |           使用更多的磁盘空间            |          使用较少的磁盘空间          |
+| **备份和恢复**  |         复杂但更可靠，支持增量备份          |         简单但可能丢失部分数据         |
+|  **使用场景**  |    高并发、高事务量、需要数据一致性和崩溃恢复的应用    |      主要读操作、对事务要求不高的应用       |
+
+[MySQL 中 InnoDB 存储引擎与 MyISAM 存储引擎的区别是什么？ - Eiffelzero - 博客园](https://www.cnblogs.com/eiffelzero/p/18608232)
 ### 3. 如何创建数据库和表（CREATE DATABASE、CREATE TABLE语句）？ 
 
 面试思路：
 
 笔记：
+- 建库
+```sql
+CREATE DATABASE [IF NOT EXISTS] <数据库名>
+[[DEFAULT] CHARACTER SET <字符集名>]
+[[DEFAULT] COLLATE <校对规则名>];
 
+# IF NOT EXISTS：在创建数据库之前进行判断，只有该数据库目前尚不存在时才能执行操作。此选项可以用来避免数据库已经存在而重复创建的错误。
+```
+CHARACTER SET：指定数据库的字符集，避免存储的数据出现乱码。如果不指定字符集，则使用系统的默认字符集。
+COLLATE：指定字符集的默认校对规则。
+
+- 建表
+```sql
+CREATE TABLE table_name (
+    column1 datatype [constraints],
+    column2 datatype [constraints],
+    ...
+    [table_constraints]
+) [table_options];
+```
+table_name： 要创建的表名
+columnX： 列名
+datatype： 列的数据类型
+constraints： 列级约束条件
+table_constraints： 表级约束条件
+table_options： 表选项配置
 ### 4. 如何创建数据库索引（CREATE INDEX语句）？ 
 
 面试思路：
@@ -63,3 +103,7 @@
 面试思路：
 
 笔记：
+- **主键索引：** 用于唯一标识表中的每一条记录，一个只能有一个，且不能为空。`CREATE TABLE 表名 (字段1 INT PRIMARY KEY);`
+- **唯一索引：** 索引列的值唯一，允许空值。`CREATE TABLE 表名(字段1 INT UNIQUE);`
+- **普通索引：** 没有任何限制，允许列中重复和空值。`CREATE TABLE 表名(字段1 INT, INDEX(字段1));`
+- **组合索引：** 多个列组合的B+树索引，采用最左前缀原则：会从最左列开始匹配条件，第一列匹配上了，才会继续向右匹配下一列
