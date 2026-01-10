@@ -11,12 +11,14 @@
             "id": "d000534feef25e91",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf"
+                "file": "5_网络/网络复习2-1.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "2025 秋招面经总结"
+              "icon": "lucide-file",
+              "title": "网络复习2-1"
             }
           }
         ]
@@ -193,8 +195,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d000534feef25e91",
+  "active": "34583f1d86c711fd",
   "lastOpenFiles": [
+    "5_网络/讲解图片/累计应答.png",
+    "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf",
     "5_网络/网络复习2-1.md",
     "5_网络/相关资料/m46r0jll3e8lbi.jpg",
     "5_网络/网络复习1-2.md",
@@ -216,7 +220,6 @@
     "11_关于一些辅助理解的小实现/P1、C++string模拟实现/c、string类——深拷贝与浅拷贝.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/4、网络协议.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/3、MySQL数据库.md",
-    "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
     "10_2025模拟面试整理/1、总结pdf/2025 项目面经总结.pdf",
     "11_关于一些辅助理解的小实现/P1、C++string模拟实现/a、参考网址.md",
