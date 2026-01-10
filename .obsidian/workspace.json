@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -196,8 +195,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d000534feef25e91",
+  "active": "34583f1d86c711fd",
   "lastOpenFiles": [
+    "5_网络/讲解图片/子网掩码.png",
     "5_网络/讲解图片/网关.png",
     "5_网络/讲解图片/子网划分.png",
     "5_网络/讲解图片/DNS.png",
@@ -243,7 +243,6 @@
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/相关图片",
     "2_C++/讲解图片/终结者模式类图.png",
     "2_C++/讲解图片/抽象工厂模式.png",
-    "2_C++/讲解图片/工厂方法模式.png",
     "未命名.canvas"
   ]
 }
