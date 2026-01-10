@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -195,8 +196,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "34583f1d86c711fd",
+  "active": "d000534feef25e91",
   "lastOpenFiles": [
+    "5_网络/讲解图片/网关.png",
     "5_网络/讲解图片/子网划分.png",
     "5_网络/讲解图片/DNS.png",
     "5_网络/讲解图片/ARP协议.png",
@@ -242,7 +244,6 @@
     "2_C++/讲解图片/终结者模式类图.png",
     "2_C++/讲解图片/抽象工厂模式.png",
     "2_C++/讲解图片/工厂方法模式.png",
-    "2_C++/讲解图片/简单工厂四则运算.png",
     "未命名.canvas"
   ]
 }
