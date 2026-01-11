@@ -28,3 +28,121 @@ lambda表达式，定义匿名函数，又称lambda函数，可以在函数内�
 - 是否是常函数 mutable可变的
 - 返回值类型
 - 函数体
+
+## 多继承
+
+普通的继承中，子类的虚表是从父类拷贝过来的。子类新增加的特有的虚函数，会添加在这个虚表里。
+
+多继承——继承多个父类
+B公有继承A1和A2，意味着B同时有A1和A2父类的拷贝，同时具有A1，A2的特性
+```cpp
+class A1{};class A2{};
+class B:public A1, public A2
+{};
+```
+**多继承性质：**
+- 虚表A1，A2都会有一份，B里面就应该有来自A1，A2的两个虚表，如果子类增加特有的虚函数，那么要在第一个虚表中添加。
+![[多继承.png]]
+
+**为了解决菱形继承——虚继承**
+
+【挖坑。。。】
+
+## 内部类
+
+如果一个类B定义在另一个类A的内部，这个类B就叫做内部类。类A叫外部类（struct套struct占空间，类套类内部类不定义对象就不占用空间）
+
+**性质：**
+- 内部类是独立的，不属于外部类，更不能通过外部类的对象去调用内部类的所有成员
+- 内部类就是外部类的友元类，内部类可以通过外部类的对象来访问外部类中的所有成员
+- 外部类不是内部类的友元
+
+**注意：**
+- 内部类可以定义在外部类的public、protected、private都是可以的。如果内部类定义在public，则可以通过 ==外部类名::内部类名 来定义内部类的对象==。
+- 内部类可以直接访问外部类中的static、枚举成员、不需要外部类的对象/类名
+- ==sizeof(外部类) = 外部类，和内部类没有任何关系==
+
+代码：
+```cpp
+#include<iostream>
+
+using namespace std;
+
+//什么是内部类?
+//如果一个类B定义在另一个类A的内部，这个类B就叫做内部类。类A叫外部类
+
+//性质
+//内部类是独立的, 不属于外部类, 更不能通过外部类的对象去调用内部类
+//内部类就是外部类的友元类, 内部类可以通过外部类的对象来访问外部类中的所有成员
+//外部类不是内部类的友元
+
+//注意
+//1.内部类可以定义在外部类的public、protected、private都是可以的。
+//如果内部类定义在public，则可通过 外部类名::内部类名 来定义内部类的对象。
+//2.内部类可以直接访问外部类中的static、枚举成员，不需要外部类的对象/类名。
+//3.内部类可以在外部类类外定义
+//4.sizeof(外部类)=外部类，和内部类没有任何关系
+//5.定义堆区内部类对象的方法 outer::inner * pi = new outer::inner;
+
+class outer
+{
+public:
+	class inner{
+	public:
+		void say( outer* p){
+			cout << p->a <<endl;//可以访问因为内部类是外部类的友元类
+			cout << s <<endl; // 可以直接访问外部类的static成员不用类名和对象
+		}
+	private:
+		int i;
+	};
+	void speak( inner * ie){
+		//cout << ie->i <<endl;//外部类不是内部类的友元类,不可访问
+	}
+private:
+	int a;
+	static int s;
+	class private_inner;
+};
+
+//内部类可以在类外定义
+class outer::private_inner{
+		public:
+		void say( outer* p){
+			cout << p->a <<endl;//可以访问因为内部类是外部类的友元类
+		}
+	private:
+		int i;
+};
+
+
+int main()
+{
+	outer o;
+	outer::inner ir;
+//	outer::private_inner pi; // 不可定义外部类对象
+	//在堆中创建内部类
+	outer::inner * pi = new outer::inner;
+	delete pi;
+	cout << sizeof( o ) <<endl; //结果4  内部类是类型不占空间
+	getchar();
+	return 0;
+}
+```
+
+## auto
+
+## auto 和decltype
+
+auto：让编译器在编译时就推导出变量的类型，可以通过 = 右边的类型推导出变量的类型
+
+`auto a = 10;` a是int
+
+decltype：用于推导表达式类型，只用于编译器分析表达式的类型，表达式实际不会进行运算。
+## for 基于范围的for循环
+```cpp
+int arr[10]={};
+for(int num:arr){
+	cout<<num<<endl;
+}
+```
