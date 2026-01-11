@@ -29,6 +29,7 @@ lambda表达式，定义匿名函数，又称lambda函数，可以在函数内�
 - 返回值类型
 - 函数体
 
+[c++ - “lambda 表达式”的优势是什么？_Stack Overflow中文网](https://stackoverflow.org.cn/questions/18168022)
 ## 多继承
 
 普通的继承中，子类的虚表是从父类拷贝过来的。子类新增加的特有的虚函数，会添加在这个虚表里。
