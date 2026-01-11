@@ -139,6 +139,34 @@ auto：让编译器在编译时就推导出变量的类型，可以通过 = 右�
 `auto a = 10;` a是int
 
 decltype：用于推导表达式类型，只用于编译器分析表达式的类型，表达式实际不会进行运算。
+
+```cpp
+const int & i = 1;
+decltype(i) b = 2; // b是const int&
+```
+**对于decltype(exp)有：**
+- exp是表达式，decltype(exp)和exp类型相同
+- exp是函数调用，decltype(exp)和函数返回值类型相同
+- 若exp是左值，decltype(exp)是exp类型的左值引用
+```cpp
+int a = 0, b = 0;
+decltype(a+b) c = 0;
+//c 是int 因为(a+b)返回一个右值
+decltype(a += b) d = c;
+//d 是 int& 因为a+=b返回一个左值
+```
+**auto与decltype组合使用：**
+```cpp
+template<typename T, typename U>
+decltype(t+u)add(T t,U u){
+	return t+u;
+}//t和u尚未定义 无法通过编译
+
+template<typename T, typename U>
+auto add(T t, U u)->decltype(t+u){
+	return t+u;
+}
+```
 ## for 基于范围的for循环
 ```cpp
 int arr[10]={};
@@ -146,3 +174,4 @@ for(int num:arr){
 	cout<<num<<endl;
 }
 ```
+![[C++11using.png]]
