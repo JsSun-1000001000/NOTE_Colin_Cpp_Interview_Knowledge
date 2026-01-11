@@ -1,0 +1,11 @@
+
+编辑 /etc/security/limits.conf 文件， 修改后内容为
+
+* soft nofile 65535
+
+* hard nofile 65535
+
+重启失效的修改
+
+
+cat /proc/sys/fs/file-max  查看是否生效
