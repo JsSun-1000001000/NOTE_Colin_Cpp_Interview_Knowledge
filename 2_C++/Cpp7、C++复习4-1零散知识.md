@@ -176,3 +176,60 @@ for(int num:arr){
 }
 ```
 ![[C++11using.png]]
+
+## 类模板
+
+类模板参数C++11之前，类模板就可以加默认参数，不过默认值要从右向左定义
+```cpp
+template <typename T, typename U = int>
+class A{
+	T value;
+}
+template<typename T = int,typename U>
+class A{
+	T value;
+}
+```
+
+C++11之前没有函数模板默认值，C++11之后可以了，并且默认值定义没有从右到左的限制
+```cpp
+template <typename R=int, typename U>
+R func2(U val){
+	return val;
+}
+```
+
+## std::function 函数封装器
+
+满足以下条件之一就可以称为可调用对象：
+- 是一个函数指针
+- 是一个具有operator()成员函数的类对象（传说中的仿函数）
+- 是一个lambda表达式
+- 是一个可被转换为函数指针的类对象
+- 是一个类（函数）成员指针
+
+bind表达式或其他函数对象
+std::function就是上面这种可调用对象的封装器，可以把std::function看作一个函数对象用于表示函数这个抽象概念，实现函数的动态绑定和传递
+
+```cpp
+#include <functional>
+
+struct PrintNum{
+	void operator()(int i)const{std::cout<<i<<endl;}
+};
+
+PrintNum print_num;
+std::funciton<void(int)> f_display = print_num;//调用对象封装到f_display中
+f_diaplay(-9);
+
+注意：若是std::funciton不含目标，则称它为空，调用空的std::function的目标会抛出std::bad_function_call异常
+```
+## std::bind 
+
+问的频率不是很高，右值引用要好好看
+
+使用std::bind可以将可==调用对象和参数==一起绑定，绑定后的结果使用std::function进行保存，并延迟掉用到任何我们需要的时候。通过std::bind，可以在调用函数的时候提前绑定部分参数，从而简化函数调用的过程，有助于提高代码的可读性和灵活性。
+
+通常有两大作用：
+- 将可调用对象与参数一起绑定为另一个stdfunction供调用
+- 提前绑定部分参数，简化函数调用
