@@ -226,7 +226,7 @@ f_diaplay(-9);
 ```
 ## std::bind 
 
-问的频率不是很高，右值引用要好好看
+问的频率不是很高，**右值引用要好好看**
 
 使用std::bind可以将可==调用对象和参数==一起绑定，绑定后的结果使用std::function进行保存，并延迟掉用到任何我们需要的时候。通过std::bind，可以在调用函数的时候提前绑定部分参数，从而简化函数调用的过程，有助于提高代码的可读性和灵活性。
 
@@ -234,3 +234,53 @@ f_diaplay(-9);
 - 将可调用对象与参数一起绑定为另一个stdfunction供调用
 - 提前绑定部分参数，简化函数调用
 
+## C++关于线程并发
+
+- thread相关
+- mutex相关
+- lock相关
+- atomic相关
+- call_once相关
+- condition_variable相关
+
+## C++11委托构造
+
+```cpp
+struct A{
+	A(){}
+	A(int a){a_ = a;}
+	A(int a, int b):A(a) {b_ = b;}
+	A(int a, int b, int c):A(a,b){c_ = c;}
+	int a_;
+	int b_;
+	int c_;
+};
+```
+
+## C++继承构造函数
+
+```cpp
+struct base{
+	base(){}
+	base(int a){a_ = a;}
+	base(int a, int b):base(a){b_ = b;}
+	int a_;
+	int b_;
+	int c_;
+};
+struct derived:base{
+	derived(){}
+	derived(int a):base(a){}//好麻烦
+	derived(int a, int b):base(a, b){}//好麻烦
+}
+
+struct derived:base{
+	using base::base;
+	//使用 这个继承构造函数
+}
+```
+## C++使用nullptr表示空指针，而不是NULL因为后者是0
+```cpp
+
+
+```
