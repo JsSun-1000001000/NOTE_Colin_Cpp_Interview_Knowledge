@@ -281,6 +281,101 @@ struct derived:base{
 ```
 ## C++使用nullptr表示空指针，而不是NULL因为后者是0
 ```cpp
+void func(void * ptr){
+	cout<<"func ptr"<<endl;
+}
+void func(int i){
+	cout<<"func i"<<endl;
+}
 
-
+int main(){
+	func(NULL);// func i
+	func(nullptr);// func ptr;
+}
 ```
+
+## C++11 final
+
+final修饰的类不可以被继承
+```cpp
+struct base final{
+	virtual void func(){
+		cout<<"base"<<endl;
+	}
+};
+struct derived:public base{
+	//编译失败 final修饰的类不可以被继承
+	void func()override{
+		cout<<"derived"<<endl;
+	}
+	void fu()override{}//error 基类没有fu 不可以被重写
+};
+```
+## C++default 和 delete
+```cpp
+struct a{
+	a() = default;//自动生成默认构造
+	int aa;
+	a(int i){aa = i;}
+};
+int main(){
+	a aa;
+	return 0
+}
+/////////////////////////////////////////
+struct a{
+	a() = default;
+	a(const a&) = delete;//禁用拷贝构造
+	a& operator = (const a&) = delete;//禁用
+	int a;
+	a(int i){a=i;}
+};
+int main(){
+	a a1;
+	a a2 = a1; //错误 拷贝构造函数被禁用
+	a a3;
+	a3 = a1;   //错误 拷贝赋值操作符被禁用
+}
+```
+## ex'plicit 专用于修饰构造函数，表示只能显示构造，不可以隐式转换
+```cpp
+struct a{
+	a(int value){//没有explicit
+		cout<<"value"<<endl;
+	}
+};
+int main(){
+	a a1 = 1;//可以隐式转换
+	return 0;
+}
+//////////////////////////////////////////////////
+struct a{
+	explicit a(int value){
+		cout<<"value"<<endl;
+	}
+};
+int main(){
+	a a1 = 1;// error 不可以隐式转换
+	a a2(2);//ok
+	return 0;
+}
+```
+## constexpr 
+
+constexpr是C++新引入的关键字，用于编译时的常量和常量函数，==**constexpr修饰的是真正的常量，会在编译期间就被计算出来，整个运行过程中不可以被改变**==，可以用于修饰函数，返回值会尽可能在编译期间被计算出来当作一个常量，如果编译期间此函数不能被计算出来，那他就会当作一个普通函数被处理
+
+```cpp
+constexpr int func(int i){
+	return i+1;
+}//这个结果可以给const赋值
+
+int main(){
+	int i = 2;
+	func(i);//普通函数
+	func(2);//编译期间就会被计算出来
+}
+```
+
+**==const和constexpr的区别：==**
+- 
+
