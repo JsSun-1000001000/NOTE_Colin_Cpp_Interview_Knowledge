@@ -378,10 +378,63 @@ int main(){
 
 **==const和constexpr的区别：==**
 - const：主要用于指明变量的值在初始化后就不应该被改变
-	- const变量的值可以在运行时确定，也可以在编译时确定
+	- const变量的值可以==在运行时确定，也可以在编译时确定==
 	- const变量的初始化可以是任意复杂的表达式
 - constexpr：是C++11新引入的关键字，==用于声明表达式为编译时常量==，保证了变量或函数在编译时就已经确定了值，使得他们可以用在需要编译时常量表达式的场景中，例如数组的大小
 	- constexpr变量或函数必须在编译时就能确定其值或结果
 	- constexpr可以用于函数和构造函数，可以创建在编译是就能计算出结果的函数和对象
-	- 
+	- ==constexpr变量或函数的初始化表达式必须足够简单，以便编译器能够在编译时求值==
+
+## C++11 enum class
+```cpp
+enum acolor{
+	kred,kgreen,kblue
+};  
+enum bcolor{
+	kwhite,kblack,kyellow
+};
+int main(){
+	if(kred==kwhite){//存在潜在问题
+		cout<<"red == white"<<endl;
+	}
+}
+/////////////////////////////////////////
+enum class acolor{
+	kred,kgreen,kblue
+};
+enum class bcolor{
+	kwhite,kblack,kyellow
+};
+int main(){
+	//编译失败
+	if(acolor::kred==bcolor::kwhite){
+		cout<<"red==white"<<endl;
+	}
+	return 0;
+}
+```
+## C++11引入了chrono库
+- duration 持续时间
+- time_point 时间点
+- clocks 时钟
+	- steady_clock
+	- system_clock
+	- high_resolution_clock
+
+## C++11 新增正则表达式 regex库
+```cpp
+#include <iostream>
+#include <regex>
+int main(){
+	std::string phoneNumber = "13912345678";
+	std::regex phoneRegex("^1[3456789]\\d{9}$");
+	if(std::regex_match(phoneNumber,phoneRegex)){
+		std::cout<<"phone number is vaild"<<std::endl;
+	}
+	else{
+		std::cout<<"Inavlic phone number"<<std::endl;
+	}
+	return 0;
+}
+```
 
