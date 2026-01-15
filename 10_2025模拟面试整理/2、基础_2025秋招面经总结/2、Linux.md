@@ -1,4 +1,4 @@
-### 1. Linux常⽤命令：ls、cd、grep、ps、top、netstat的作⽤？ 
+### 1. Linux常用命令：ls、cd、grep、ps、top、netstat的作⽤？ 
 ### 2. 如何查看进程状态（ps、top命令）？
 ### 3. Linux如何创建压缩包（tar、gzip命令）？ 
 ### 4. 如何查看⽂件内容（cat、more、less、tail命令）？ 
