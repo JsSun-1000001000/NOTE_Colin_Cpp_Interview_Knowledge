@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
+                "file": "10_2025模拟面试整理/2、基础_2025秋招面经总结/4、网络协议.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1、C_C++"
+              "title": "4、网络协议"
             }
           }
         ]
@@ -75,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "map",
+                "query": "http和https",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -218,12 +218,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a0cdc7d0fa1cc752",
+  "active": "0dc75e170629af5f",
   "lastOpenFiles": [
+    "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
     "欢迎.md",
     "10_2025模拟面试整理/3、项目_2025面经总结/五子智弈（游戏大厅——五子棋）.md",
     "关于面稿.md",
-    "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/4、网络协议.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/2、Linux.md",
     "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf",
