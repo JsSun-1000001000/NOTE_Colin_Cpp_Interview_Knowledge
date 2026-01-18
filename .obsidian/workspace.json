@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6_操作系统/OS3、操作系统2-2.md",
+                "file": "欢迎.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "OS3、操作系统2-2"
+              "title": "欢迎"
             }
           }
         ]
@@ -210,9 +210,9 @@
   },
   "active": "aad42595aae831f9",
   "lastOpenFiles": [
+    "6_操作系统/OS3、操作系统2-2.md",
     "6_操作系统/OS0、test整理.md",
     "6_操作系统/OS2、操作系统2-1.md",
-    "6_操作系统/OS3、操作系统2-2.md",
     "6_操作系统/相关资料/README.md",
     "copilot/copilot-conversations/介绍一下自己，用的什么模型？@20260118_114349.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/4、网络协议.md",
