@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -186,11 +187,11 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 237.5,
+    "width": 345.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -210,8 +211,9 @@
   },
   "active": "aad42595aae831f9",
   "lastOpenFiles": [
-    "10_2025模拟面试整理/2、基础_2025秋招面经总结/4、网络协议.md",
+    "copilot/copilot-conversations/介绍一下自己，用的什么模型？@20260118_114349.md",
     "6_操作系统/OS2、操作系统2-1.md",
+    "10_2025模拟面试整理/2、基础_2025秋招面经总结/4、网络协议.md",
     "6_操作系统/相关资料/Linux系统/linux/linux/二、和网络有关的命令_files/54a11daa-0a02-4ed1-97d9-e89f987a5be2.png",
     "6_操作系统/相关资料/Linux系统/块组.jpg",
     "6_操作系统/相关资料/README.md",
@@ -220,7 +222,6 @@
     "10_2025模拟面试整理/3、项目_2025面经总结/趣聊星球.md",
     "10_2025模拟面试整理/3、项目_2025面经总结/五子智弈（游戏大厅——五子棋）.md",
     "copilot/copilot-conversations/介绍一下自己@20260118_142813.md",
-    "copilot/copilot-conversations/介绍一下自己，用的什么模型？@20260118_114349.md",
     "关于面稿.md",
     "copilot/copilot-custom-prompts/Make longer.md",
     "copilot/copilot-custom-prompts/Generate table of contents.md",
