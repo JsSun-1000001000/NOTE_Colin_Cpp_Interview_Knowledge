@@ -190,7 +190,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 688.5,
+    "width": 537.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -210,6 +210,8 @@
   },
   "active": "ac75ec5628efa31c",
   "lastOpenFiles": [
+    "copilot/copilot-conversations/介绍一下自己，用的什么模型？@20260118_114349.md",
+    "copilot/copilot-conversations",
     "copilot/copilot-custom-prompts/Clip Web Page.md",
     "10_2025模拟面试整理/3、项目_2025面经总结/趣聊星球.md",
     "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
@@ -244,7 +246,6 @@
     "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf",
     "2_C++/Cpp9、C++复习4-2设计模式.md",
     "2_C++/Cpp8、C++复习4-2设计原则.md",
-    "2_C++/Cpp7、C++复习4-1零散知识.md",
     "10_2025模拟面试整理/未命名",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/相关图片/子网掩码和子网划分.jpg",
     "欢迎1",
@@ -255,7 +256,6 @@
     "5_网络/相关资料/网络/网络/路由_files/20190908104027252.jpg",
     "5_网络/相关资料/网络/网络/路由_files/20190908104018360.jpg",
     "5_网络/相关资料/网络/网络/路由_files/20190908104008385.jpg",
-    "5_网络/相关资料/网络/网络/路由_files",
     "未命名.canvas"
   ]
 }
