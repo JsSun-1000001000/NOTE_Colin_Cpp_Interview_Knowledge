@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -209,8 +208,10 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "aad42595aae831f9",
+  "active": "34583f1d86c711fd",
   "lastOpenFiles": [
+    "6_操作系统/讲解图片",
+    "6_操作系统/讲解图片/页表与地址映射.png",
     "13_往年面试题/6、小米一面.md",
     "13_往年面试题/5、武汉大水云科技有限公司.md",
     "6_操作系统/OS0、test整理.md",
@@ -241,7 +242,6 @@
     "copilot/copilot-conversations",
     "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
-    "copilot/copilot-custom-prompts/Rewrite as tweet.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "10_2025模拟面试整理/1、总结pdf/2025 项目面经总结.pdf",
@@ -256,7 +256,6 @@
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/相关图片/OSI七层对应描述.png",
     "2_C++/讲解图片/观察者模式.png",
     "2_C++/讲解图片/策略模式.png",
-    "5_网络/相关资料/网络/网络/路由_files/20190908104034282.jpg",
     "未命名.canvas"
   ]
 }
