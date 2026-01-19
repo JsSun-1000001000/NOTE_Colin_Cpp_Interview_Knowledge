@@ -14,6 +14,7 @@
 - new接的类型，malloc接的申请空间大小；
 - new用完直接就是定义的类型，malloc需要强制转换；
 - ==**new会调用构造，malloc不会**==
+- malloc开辟虚拟内存 32位不到4g
 
 [[C6、C语言复习3-2#malloc-free/new-delete区别对比]]
 ### 2. map和unordered_map的区别？ 

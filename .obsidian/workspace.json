@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "http和https",
+                "query": "循环",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -208,7 +208,7 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "aad42595aae831f9",
+  "active": "34583f1d86c711fd",
   "lastOpenFiles": [
     "欢迎.md",
     "6_操作系统/OS3、操作系统2-2.md",
