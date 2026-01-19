@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "6_操作系统/OS0、test整理.md",
+                "file": "6_操作系统/OS3、操作系统2-2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "OS0、test整理"
+              "title": "OS3、操作系统2-2"
             }
           }
         ]
@@ -210,6 +210,9 @@
   },
   "active": "aad42595aae831f9",
   "lastOpenFiles": [
+    "13_往年面试题/6、小米一面.md",
+    "13_往年面试题/5、武汉大水云科技有限公司.md",
+    "6_操作系统/OS0、test整理.md",
     "13_往年面试题/4、小红书 一面IOS.md",
     "13_往年面试题/3、小红书 ios-社区技术 一面.md",
     "13_往年面试题/2、腾讯视频客户端一面1h.md",
@@ -220,7 +223,6 @@
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
     "欢迎.md",
     "6_操作系统/OS3、操作系统2-2.md",
-    "6_操作系统/OS0、test整理.md",
     "6_操作系统/OS2、操作系统2-1.md",
     "6_操作系统/相关资料/README.md",
     "copilot/copilot-conversations/介绍一下自己，用的什么模型？@20260118_114349.md",
@@ -239,8 +241,6 @@
     "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet.md",
-    "copilot/copilot-custom-prompts/Remove URLs.md",
-    "copilot/copilot-custom-prompts/Generate glossary.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "10_2025模拟面试整理/1、总结pdf/2025 项目面经总结.pdf",
