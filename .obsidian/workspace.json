@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "欢迎.md",
+                "file": "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "欢迎"
+              "title": "1、C_C++"
             }
           }
         ]
@@ -210,6 +210,7 @@
   },
   "active": "aad42595aae831f9",
   "lastOpenFiles": [
+    "欢迎.md",
     "6_操作系统/OS3、操作系统2-2.md",
     "6_操作系统/OS0、test整理.md",
     "6_操作系统/OS2、操作系统2-1.md",
@@ -239,7 +240,6 @@
     "copilot/copilot-custom-prompts/Simplify.md",
     "copilot/copilot-custom-prompts/Summarize.md",
     "copilot/copilot-custom-prompts/Translate to Chinese.md",
-    "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "10_2025模拟面试整理/1、总结pdf/2025 项目面经总结.pdf",
