@@ -4,5 +4,6 @@
   "better-export-pdf",
   "any-block",
   "copilot",
-  "obsidian-textgenerator-plugin"
+  "obsidian-textgenerator-plugin",
+  "vscode-editor"
 ]

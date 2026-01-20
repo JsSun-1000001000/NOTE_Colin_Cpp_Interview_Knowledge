@@ -4,26 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "e3cf34303adf5212",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "aad42595aae831f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "1、C_C++"
-            }
-          }
-        ]
-      },
-      {
         "id": "f5cb64fa0b972380",
         "type": "tabs",
         "children": [
@@ -33,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_C++/Cpp9、C++复习4-2设计模式.md",
+                "file": "10_2025模拟面试整理/A、26.1.16的整理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cpp9、C++复习4-2设计模式"
+              "title": "A、26.1.16的整理"
             }
           }
         ]
@@ -133,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
+                "file": "10_2025模拟面试整理/A、26.1.16的整理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "1、C_C++ 的出链列表"
+              "title": "A、26.1.16的整理 的出链列表"
             }
           },
           {
@@ -225,13 +205,24 @@
       "obsidian-git:Open Git source control": false,
       "copilot:Open Copilot Chat": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
+      "vscode-editor:新建代码文件": false
     }
   },
-  "active": "aad42595aae831f9",
+  "active": "d9dfc0d0cd10a570",
   "lastOpenFiles": [
-    "2_C++/Cpp9、C++复习4-2设计模式.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
+    "10_2025模拟面试整理/A、26.1.16的整理.md",
+    "2_C++/Cpp9、C++复习4-2设计模式.md",
+    "11_关于一些辅助理解的小实现/P1、C++string模拟实现/d、赋值运算符重载与深拷贝.md",
+    "11_关于一些辅助理解的小实现/P1、C++string模拟实现/e、迭代器.md",
+    "11_关于一些辅助理解的小实现/P1、C++string模拟实现/c、string类——深拷贝与浅拷贝.md",
+    "13_往年面试题/6、小米一面.md",
+    "13_往年面试题/5、武汉大水云科技有限公司.md",
+    "13_往年面试题/4、小红书 一面IOS.md",
+    "13_往年面试题/3、小红书 ios-社区技术 一面.md",
+    "13_往年面试题/2、腾讯视频客户端一面1h.md",
+    "13_往年面试题/1、小米C++.md",
     "2_C++/CppZ、C++11线程&3种锁.md",
     "2_C++/Cpp8、C++复习4-2设计原则.md",
     "2_C++/Cpp7、C++复习4-1零散知识.md",
@@ -242,14 +233,7 @@
     "6_操作系统/OS3、操作系统2-2.md",
     "6_操作系统/讲解图片",
     "6_操作系统/讲解图片/页表与地址映射.png",
-    "13_往年面试题/6、小米一面.md",
-    "13_往年面试题/5、武汉大水云科技有限公司.md",
     "6_操作系统/OS0、test整理.md",
-    "13_往年面试题/4、小红书 一面IOS.md",
-    "13_往年面试题/3、小红书 ios-社区技术 一面.md",
-    "13_往年面试题/2、腾讯视频客户端一面1h.md",
-    "13_往年面试题/1、小米C++.md",
-    "10_2025模拟面试整理/A、26.1.16的整理.md",
     "13_往年面试题",
     "10_2025模拟面试整理/3、项目_2025面经总结/五子智弈（游戏大厅——五子棋）.md",
     "欢迎.md",
@@ -259,10 +243,7 @@
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/4、网络协议.md",
     "6_操作系统/相关资料/Linux系统/linux/linux/二、和网络有关的命令_files/54a11daa-0a02-4ed1-97d9-e89f987a5be2.png",
     "6_操作系统/相关资料/Linux系统/块组.jpg",
-    "6_操作系统/OS1、操作系统1-1.md",
     "6_操作系统/相关资料/线程不同状态间的切换.png",
-    "10_2025模拟面试整理/3、项目_2025面经总结/趣聊星球.md",
-    "copilot/copilot-conversations/介绍一下自己@20260118_142813.md",
     "copilot/copilot-conversations",
     "copilot/copilot-custom-prompts",
     "copilot",
