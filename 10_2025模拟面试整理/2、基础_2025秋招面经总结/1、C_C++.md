@@ -447,7 +447,7 @@ C++二义性：
 面试思路：
 
 笔记：
-- **==饿汉式（Eager Initialization）==**在类加载时就创建实例，线程安全但是可能会浪费资源——太饿了刚加载就创建了
+- **==饿汉式（Eager Initialization）==** 在类加载时就创建实例，线程安全但是可能会浪费资源——太饿了刚加载就创建了
 ```cpp
 ///////////////////////----饿汉实现----/////////////////////////
 class Singleton{
@@ -552,27 +552,186 @@ Single::~Single(){
 ```
 **==使用互斥锁保证线程安全的懒汉式单例==**：
 - 返回普通指针
+```cpp
+///////////////////  加锁的懒汉式实现  //////////////////
 
+class SingleInstance
+{
+
+public:
+    // 获取单实例对象
+    static SingleInstance *GetInstance();
+
+    //释放单实例，进程退出时调用
+    static void deleteInstance();
+	
+    // 打印实例地址
+    void Print();
+
+private:
+    // 将其构造和析构成为私有的, 禁止外部构造和析构
+    SingleInstance();
+    ~SingleInstance();
+
+    // 将其拷贝构造和赋值构造成为私有函数, 禁止外部拷贝和赋值
+    SingleInstance(const SingleInstance &signal);
+    const SingleInstance &operator=(const SingleInstance &signal);
+
+private:
+    // 唯一单实例对象指针
+    static SingleInstance *m_SingleInstance;
+    static std::mutex m_Mutex;
+};
+//////////////////////////////////////////////////////////////////////
+//初始化静态成员变量
+SingleInstance *SingleInstance::m_SingleInstance = nullptr;
+std::mutex SingleInstance::m_Mutex;
+
+// 注意：不能返回指针的引用，否则存在外部被修改的风险！
+SingleInstance * SingleInstance::GetInstance()
+{
+
+    //  这里使用了两个 if 判断语句的技术称为双检锁；好处是，只有判断指针为空的时候才加锁，
+    //  避免每次调用 GetInstance的方法都加锁，锁的开销毕竟还是有点大的。
+    if (m_SingleInstance == nullptr) 
+    {
+        std::unique_lock<std::mutex> lock(m_Mutex); // 加锁
+        if (m_SingleInstance == nullptr)
+        {
+            volatile auto temp = new (std::nothrow) SingleInstance();
+            m_SingleInstance = temp;
+        }
+    }
+
+    return m_SingleInstance;
+}
+
+void SingleInstance::deleteInstance()
+{
+    std::unique_lock<std::mutex> lock(m_Mutex); // 加锁
+    if (m_SingleInstance)
+    {
+        delete m_SingleInstance;
+        m_SingleInstance = nullptr;
+    }
+}
+
+void SingleInstance::Print()
+{
+	std::cout << "我的实例内存地址是:" << this << std::endl;
+}
+
+SingleInstance::SingleInstance()
+{
+    std::cout << "构造函数" << std::endl;
+}
+
+SingleInstance::~SingleInstance()
+{
+    std::cout << "析构函数" << std::endl;
+}
+```
 - 返回智能指针
+```cpp
+#include <iostream>
+#include <memory>
+#include <mutex>
 
+
+class Singleton {
+
+public:
+
+    static std::shared_ptr<Singleton> getSingleton();
+
+    void print() {
+        std::cout << "Hello World." << std::endl;
+    }
+
+    ~Singleton() {
+        std::cout << __PRETTY_FUNCTION__ << std::endl;
+    }
+
+private:
+
+    Singleton() {
+        std::cout << __PRETTY_FUNCTION__ << std::endl;
+    }
+};
+
+static std::shared_ptr<Singleton> singleton = nullptr;
+static std::mutex singletonMutex;
+
+std::shared_ptr<Singleton> Singleton::getSingleton() {
+    if (singleton == nullptr) {
+        std::unique_lock<std::mutex> lock(singletonMutex);
+        if (singleton == nullptr) {
+            volatile auto temp = std::shared_ptr<Singleton>(new Singleton());
+            singleton = temp;
+        }
+    }
+    return singleton;
+}
+
+```
+**==使用C++11 call_once实现的懒汉式==**
+```cpp
+#include <iostream>
+#include <memory>
+#include <mutex>
+
+class Singleton {
+public:
+    static std::shared_ptr<Singleton> getSingleton();
+
+    void print() {
+        std::cout << "Hello World." << std::endl;
+    }
+
+    ~Singleton() {
+        std::cout << __PRETTY_FUNCTION__ << std::endl;
+    }
+
+private:
+    Singleton() {
+        std::cout << __PRETTY_FUNCTION__ << std::endl;
+    }
+};
+
+static std::shared_ptr<Singleton> singleton = nullptr;
+static std::once_flag singletonFlag;
+
+std::shared_ptr<Singleton> Singleton::getSingleton() {
+    std::call_once(singletonFlag, [&] {
+        singleton = std::shared_ptr<Singleton>(new Singleton());
+    });
+    return singleton;
+}
+```
+[【C++】C++ 单例模式总结（5种单例实现方法）\_单例模式c++实现-CSDN博客](https://blog.csdn.net/unonoi/article/details/121138176)
 ### 2. 工厂模式的分类（简单工厂、工厂方法、抽象工厂）及区别？ 
 
 面试思路：
 
 笔记：
-
-### 3. 观察者模式的实现原理及应⽤场景？ 
+- 简单工厂不算是一个真正的设计模式，是一种编程习惯。通过一个工厂类来创建不同的产品对象，适用于产品种类较少且不需要扩展的场景。它不支持增加新产品。
+- 工厂方法通过定义一个创建对象的接口，由多个具体工厂类来实现，适用于需要扩展新产品的场景。它支持增加新产品，但每个工厂只负责创建一种产品。
+- 抽象工厂提供一个创建一系列相关或相互依赖对象的接口，而无序指定他们具体的类，大工厂套小工厂。
+### 3. 观察者模式的实现原理及应用场景？ 
 
 面试思路：
 
 笔记：
-
+- 观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象；当这个对象的状态发生变化的时候，会通知所有的观察者对象，使他们能够自动更新自己
+- 应用场景的话，比如==发布-订阅==系统中，up主更新内容会通知所有的观察者粉丝更新了新内容；或者==qt当中的事件驱动==，点击界面的按钮控件，会导致多个界面的更新，这时候可以把各种界面放在链表里，点击按钮就会遍历链表，这样加新的界面只需要链表插入就可以了。
 ### 4. 策略模式的应用场景？ 
 
 面试思路：
 
 笔记：
-
+- 策略模式一共有三个类，content上下文类、strategy算法类接口、
+- 定义了算法家族，并将它们封装起来，让他们可以相互替换，这样算法的变化不会影响到算法的客户
+- 比如说，商场打折有各种各种打折方式，可以定义一个打折虚函数，然后有不同的打折函数实现
 ### 5. 装饰器模式与代理模式的区别？ 
 
 面试思路：
