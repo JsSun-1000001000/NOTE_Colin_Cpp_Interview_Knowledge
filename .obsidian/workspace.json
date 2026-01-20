@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "欢迎.md",
+                "file": "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "欢迎 的出链列表"
+              "title": "1、C_C++ 的出链列表"
             }
           },
           {
@@ -186,7 +186,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -208,8 +208,17 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "34583f1d86c711fd",
+  "active": "aad42595aae831f9",
   "lastOpenFiles": [
+    "2_C++/Cpp9、C++复习4-2设计模式.md",
+    "2_C++/CppZ、C++11线程&3种锁.md",
+    "2_C++/Cpp8、C++复习4-2设计原则.md",
+    "2_C++/Cpp7、C++复习4-1零散知识.md",
+    "2_C++/Cpp6、C++11复习3-2智能指针.md",
+    "2_C++/Cpp4、C++11复习2-2.md",
+    "2_C++/Cpp3、C++复习2-1.md",
+    "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
+    "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf",
     "6_操作系统/OS3、操作系统2-2.md",
     "6_操作系统/讲解图片",
     "6_操作系统/讲解图片/页表与地址映射.png",
@@ -223,7 +232,6 @@
     "10_2025模拟面试整理/A、26.1.16的整理.md",
     "13_往年面试题",
     "10_2025模拟面试整理/3、项目_2025面经总结/五子智弈（游戏大厅——五子棋）.md",
-    "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
     "欢迎.md",
     "6_操作系统/OS2、操作系统2-1.md",
     "6_操作系统/相关资料/README.md",
@@ -235,13 +243,7 @@
     "6_操作系统/相关资料/线程不同状态间的切换.png",
     "10_2025模拟面试整理/3、项目_2025面经总结/趣聊星球.md",
     "copilot/copilot-conversations/介绍一下自己@20260118_142813.md",
-    "关于面稿.md",
-    "copilot/copilot-custom-prompts/Make longer.md",
-    "copilot/copilot-custom-prompts/Generate table of contents.md",
-    "copilot/copilot-custom-prompts/Clip Web Page.md",
     "copilot/copilot-conversations",
-    "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
-    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "10_2025模拟面试整理/1、总结pdf/2025 项目面经总结.pdf",
@@ -250,7 +252,6 @@
     "6_操作系统/相关资料/操作系统/操作系统/内存/内存管理-段式页式段页式_files/0.312489779022465.png",
     "未命名.base",
     "5_网络/相关资料/浅谈服务器集群、负载均衡、与分布式.png",
-    "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/相关图片/子网掩码和子网划分.jpg",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/相关图片/OSI七层对应描述.png",
     "2_C++/讲解图片/观察者模式.png",
