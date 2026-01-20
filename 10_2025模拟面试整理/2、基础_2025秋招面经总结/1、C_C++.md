@@ -447,7 +447,7 @@ C++二义性：
 面试思路：
 
 笔记：
-- 饿汉式（Eager Initialization）在类加载时就创建实例，线程安全但是可能会浪费资源——太饿了刚加载就创建了
+- **==饿汉式（Eager Initialization）==**在类加载时就创建实例，线程安全但是可能会浪费资源——太饿了刚加载就创建了
 ```cpp
 ///////////////////////----饿汉实现----/////////////////////////
 class Singleton{
@@ -470,10 +470,30 @@ private:
 	static Singleton * g_pSingleton;
 };
 /////////////////////////////////////////////////////////////
+//一运行就初始化创建单例 本身线程安全
+Singleton* Singleton::g_pSingleton = new(std::nothrow)Singleton();
 
+Singleton* Singleton::getInstance(){
+	return g_pSingleton;
+}
+void Singleton::deleteInstance(){
+	if(g_pSingleton){
+		delete g_pSingleton;
+		g_pSingleton = nullptr;
+	}
+}
+void Singleton::print(){
+	std::cout<<"my single address "<<this<<std::endl;
+}
+Singleton::Singleton(){
+	std::cout<<"Singleton"<<std::endl;
+}
+Singleton::~Singleton(){
+	std::cout<<"~Singleton"<<std::endl;
+}
 ```
-- 懒汉式（Lazy Initialization）首次调用的时候创建实例，有线程不安全的问题（多线程可能会创建多个实例）——懒，用的时候现调
-普通懒汉式（线程不安全）：
+- **==懒汉式（Lazy Initialization）==** 首次调用的时候创建实例，有线程不安全的问题（多线程可能会创建多个实例）——懒，用的时候现调
+**==普通懒汉式（线程不安全）==**：
 ```cpp
 class Single{
 public:
@@ -491,7 +511,7 @@ private:
 }
 Single* Single::instance = nullptr;
 ```
-静态局部变量的懒汉式（线程安全的）：[Meyer’s Singleton — FleCSI 2.-1 (devel) documentation](https://laristra.github.io/flecsi/src/developer-guide/patterns/meyers_singleton.html)
+**==静态局部变量的懒汉式（线程安全的）==**：[Meyer’s Singleton — FleCSI 2.-1 (devel) documentation](https://laristra.github.io/flecsi/src/developer-guide/patterns/meyers_singleton.html)
 ```cpp
 class Single{
 public:
@@ -530,6 +550,11 @@ Single::~Single(){
 	std::cout<< "~single" <<std::endl;
 }
 ```
+**==使用互斥锁保证线程安全的懒汉式单例==**：
+- 返回普通指针
+
+- 返回智能指针
+
 ### 2. 工厂模式的分类（简单工厂、工厂方法、抽象工厂）及区别？ 
 
 面试思路：
