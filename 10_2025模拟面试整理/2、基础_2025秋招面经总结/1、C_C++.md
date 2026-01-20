@@ -447,7 +447,89 @@ C++二义性：
 面试思路：
 
 笔记：
+- 饿汉式（Eager Initialization）在类加载时就创建实例，线程安全但是可能会浪费资源——太饿了刚加载就创建了
+```cpp
+///////////////////////----饿汉实现----/////////////////////////
+class Singleton{
+pulbic:
+	//获取单例
+	static Singleton* getInstance();
+	//释放单例，进程退出时调用
+	static void deleteInstance();
+	//打印
+	void print();
+private:
+	//将其构造和析构成为私有的，禁止外部构造和析构
+	Singleton();
+	~Singleton();
+	//拷贝构造和赋值构造也是私有的，禁止外部拷贝和赋值
+	Singleton(const Singleton &single);
+	const Singleton & opetator = (const Singleton &signal);
+private:
+	//唯一单例对象指针
+	static Singleton * g_pSingleton;
+};
+/////////////////////////////////////////////////////////////
 
+```
+- 懒汉式（Lazy Initialization）首次调用的时候创建实例，有线程不安全的问题（多线程可能会创建多个实例）——懒，用的时候现调
+普通懒汉式（线程不安全）：
+```cpp
+class Single{
+public:
+	static Single * getInstance(){
+		if(instance == nullptr){
+			instance = new Single();
+		}
+		return instance;
+	}
+private:
+	Single(){}
+	~Single(const Single& single){}
+	Single & operator = (const Single&){}
+	static Single * instance;
+}
+Single* Single::instance = nullptr;
+```
+静态局部变量的懒汉式（线程安全的）：[Meyer’s Singleton — FleCSI 2.-1 (devel) documentation](https://laristra.github.io/flecsi/src/developer-guide/patterns/meyers_singleton.html)
+```cpp
+class Single{
+public:
+	//获取单例对象
+	static Single& getInstance();
+	//打印
+	void print();
+private:
+	//禁止外部构造
+	Single();
+	//禁止外部析构
+	~Single();
+	//禁止外部拷贝构造
+	Single(const Single &single) = delete;
+	//禁止外部赋值操作
+	const Single & operator = (const Single &single) = delete;
+};
+///////////////////////////////////////////////////////////////
+Single& Single::getInstance(){
+	/**
+	* 局部静态特性的方式实现单例
+	* 静态局部变量只在当前函数内有效，其他函数无法访问  
+	* 静态局部变量只在第一次被调用的时候初始化，也存储在静态存储区，
+	* 生命周期从第一次被初始化起至程序结束为止
+	*/
+	static Single single;
+	return single;
+}
+void Single::print(){
+	std::cout << "my memory address is" << this << std::endl;
+}
+Single::Single(){
+	std::cout<< "single" <<std::endl;
+}
+Single::~Single(){
+	std::cout<< "~single" <<std::endl;
+}
+```
 ### 2. 工厂模式的分类（简单工厂、工厂方法、抽象工厂）及区别？ 
 
 面试思路：
