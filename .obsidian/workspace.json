@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "线程",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -208,7 +208,7 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "d9dfc0d0cd10a570",
+  "active": "34583f1d86c711fd",
   "lastOpenFiles": [
     "13_往年面试题/1、小米C++.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/2、Linux.md",
