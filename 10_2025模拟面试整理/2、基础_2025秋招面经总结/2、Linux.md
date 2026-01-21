@@ -106,4 +106,24 @@
 ### 24. Makefile的基本编写规则（目标、依赖、命令）？ 
 ### 25. 如何编译C++程序（g++命令及常用参数）？ （补充高频考点） 
 ### 26. [[高频]] select、poll、epoll的区别？为什么epoll效率更高？
+
+思路：
+[list2pumlMindmap]
+- select/poll/epoll的区别
+	- IO效率
+	- 操作方式
+	- 底层实现
+	- 最大连接数
+	- 对描述符的拷贝
+	- 性能
+	- 平台支持
+笔记：
+- IO效率：select和poll需要无差别轮询所有的描述符集合，时间复杂度为$O(1)$；epoll是事件驱动的，
+- 操作方式：
+- 底层实现：
+- 最大连接数：
+- 对描述符的拷贝：
+- 性能：
+- 平台支持：select在Windows、Mac、Linux上都支持；poll是类unix系统都支持；epoll是Linux独有的
+[面试必备：对 select，poll，epoll 的详细解析_poll和select和epoll的作用-CSDN博客](https://blog.csdn.net/Geffin/article/details/105364662)
 ### 27. [[高频]] Linux内存管理机制（虚拟内存、页表、缺页中断）？
