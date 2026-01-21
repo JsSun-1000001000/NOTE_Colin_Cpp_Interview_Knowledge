@@ -101,7 +101,7 @@
 - ==环路等待（循环等待）==：
 ### 20. Linux文件系统的目录结构（/bin、/etc、/home、/proc等）？
 ### 21. 如何查看内核版本（uname命令）？
-### 22. 如何查看系统日志（/var/log⽬录）？
+### 22. 如何查看系统日志（/var/log目录）？
 ### 23. 如何使用gdb调试程序（断点、查看变量、单步执行）？ 
 ### 24. Makefile的基本编写规则（目标、依赖、命令）？ 
 ### 25. 如何编译C++程序（g++命令及常用参数）？ （补充高频考点） 
@@ -111,19 +111,34 @@
 [list2pumlMindmap]
 - select/poll/epoll的区别
 	- IO效率
+		- 靠什么驱动
+		- 时间复杂度
 	- 操作方式
+		- 遍历方式
 	- 底层实现
+		- select底层
+		- poll底层
+		- epoll底层
 	- 最大连接数
+		- select
+		- poll和epoll
 	- 对描述符的拷贝
+		- select和poll
+		- epoll
 	- 性能
+		- 高并发情况下
+		- 连接数少且十分活跃情况下
 	- 平台支持
+		- select
+		- poll
+		- epoll
 笔记：
-- IO效率：select和poll需要无差别轮询所有的描述符集合，时间复杂度为$O(1)$；epoll是事件驱动的，
-- 操作方式：
-- 底层实现：
-- 最大连接数：
-- 对描述符的拷贝：
-- 性能：
+- IO效率：select和poll需要无差别轮询所有的描述符集合，时间复杂度为$O(1)$；epoll是事件驱动的，当描述符就绪时，回调函数会把描述符放到就绪队列里面，时间复杂度为$O(n)$
+- 操作方式：select和poll采用遍历，而epoll采用了回调
+- 底层实现：select底层是数组；poll底层是链表；epoll底层是红黑树
+- 最大连接数：select最大连接数为1024或2048；poll和epoll无上限（受限于系统）
+- 对描述符的拷贝：select和poll每次调用都会把描述符集合从用户态拷贝到内核态；epoll在调用`epoll_ctl`时会拷贝进内核并保存，之后每次`epoll_wait`时不会再拷贝
+- 性能：epoll在高并发的情况下性能远超select和poll；但在连接数少且都十分活跃的情况下，select和poll性能比epoll好（因为要很多函数回调）
 - 平台支持：select在Windows、Mac、Linux上都支持；poll是类unix系统都支持；epoll是Linux独有的
 [面试必备：对 select，poll，epoll 的详细解析_poll和select和epoll的作用-CSDN博客](https://blog.csdn.net/Geffin/article/details/105364662)
 ### 27. [[高频]] Linux内存管理机制（虚拟内存、页表、缺页中断）？
