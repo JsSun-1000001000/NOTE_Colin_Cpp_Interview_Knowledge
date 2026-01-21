@@ -30,7 +30,7 @@ int main()
 	cout << f2() <<endl;
 	cout << j <<endl;
 	//auto  f3 = [ j ]() { return j ; };  // 先后执行会有不同
-//	Sleep(1000);
+	//Sleep(1000);
 	cout << f3() <<endl;
 	cout << j <<endl;
 	cout << "-----------------------------" <<endl;
