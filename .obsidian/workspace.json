@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_2025模拟面试整理/2、基础_2025秋招面经总结/2、Linux.md",
+                "file": "2_C++/Cpp13、C++11—lambda表达式.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2、Linux"
+              "title": "Cpp13、C++11—lambda表达式"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -208,15 +209,17 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "34583f1d86c711fd",
+  "active": "d9dfc0d0cd10a570",
   "lastOpenFiles": [
-    "13_往年面试题/1、小米C++.md",
+    "2_C++/Cpp10、C++11线程&3种锁.md",
+    "2_C++/C++相关资料/未命名.md",
+    "2_C++/Cpp13、C++11—lambda表达式.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/2、Linux.md",
+    "13_往年面试题/1、小米C++.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/4、网络协议.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
     "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf",
     "2_C++/Cpp9、C++复习4-2设计模式.md",
-    "2_C++/CppZ、C++11线程&3种锁.md",
     "11_关于一些辅助理解的小实现/P1、C++string模拟实现/d、赋值运算符重载与深拷贝.md",
     "11_关于一些辅助理解的小实现/P1、C++string模拟实现/c、string类——深拷贝与浅拷贝.md",
     "11_关于一些辅助理解的小实现/P1、C++string模拟实现/b、前言.md",
@@ -238,7 +241,6 @@
     "6_操作系统/OS3、操作系统2-2.md",
     "6_操作系统/讲解图片",
     "6_操作系统/讲解图片/页表与地址映射.png",
-    "6_操作系统/OS0、test整理.md",
     "13_往年面试题",
     "6_操作系统/相关资料/Linux系统/linux/linux/二、和网络有关的命令_files/54a11daa-0a02-4ed1-97d9-e89f987a5be2.png",
     "6_操作系统/相关资料/Linux系统/块组.jpg",
