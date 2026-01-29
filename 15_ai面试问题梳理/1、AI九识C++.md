@@ -12,6 +12,11 @@
 #### 6. 数据库的设计
 #### 7. static关键字
 #### 8. STL容器
+
+- 六大组成部分：容器、算法、迭代器、仿函数、适配器、空间配置器
+- 序列性容器：vector、list、queue、deque、stack、array
+- 关联性容器：map、set、multimap、multiset、unordered_map、unordered_set
+
 #### 9. 数据库优化
 #### 10. select poll epoll的比较
 #### 11. 介绍epoll的底层
