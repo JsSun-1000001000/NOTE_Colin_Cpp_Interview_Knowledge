@@ -249,7 +249,8 @@
 > 其实不一定存储在只读段的，和编译器有很大关系，不考虑了
 
 > [!NOTE] const常量折叠
-> Contents
+> 常量折叠是指在编译时识别和评估常量表达式的过程，而不是在运行时计算它们。
+> [编译器优化 3 - 常量折叠和传播 - 知乎](https://zhuanlan.zhihu.com/p/617485437)
 
 [深入解析 const 关键字：指针、参数、返回值和类成员函数_const关键字-CSDN博客](https://blog.csdn.net/Dreaming_TI/article/details/133646406)
 [C语言volatile关键字的作用 - C语言中文网](https://c.biancheng.net/view/2iie2p.html)
