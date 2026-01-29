@@ -6,7 +6,7 @@
       {
         "id": "f5cb64fa0b972380",
         "type": "tabs",
-        "dimension": 65.5376799322608,
+        "dimension": 54.428341384863124,
         "children": [
           {
             "id": "d9dfc0d0cd10a570",
@@ -27,7 +27,7 @@
       {
         "id": "401a24725b78d555",
         "type": "tabs",
-        "dimension": 34.462320067739206,
+        "dimension": 45.571658615136876,
         "children": [
           {
             "id": "6d7f226097dd399a",
@@ -75,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "类的大小",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -96,8 +96,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -231,15 +230,16 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "a0cdc7d0fa1cc752",
+  "active": "d9dfc0d0cd10a570",
   "lastOpenFiles": [
     "2_C++/Cpp6、C++11复习3-2智能指针.md",
     "2_C++/Cpp5、C++11复习3-1.md",
-    "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf",
+    "2_C++/Cpp4、C++11复习2-2.md",
+    "2_C++/Cpp1、C++复习1-1.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
+    "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf",
     "2_C++/Cpp9、C++复习4-2设计模式.md",
     "2_C++/Cpp13、C++11—lambda表达式.md",
-    "2_C++/Cpp4、C++11复习2-2.md",
     "2_C++/Cpp7、C++复习4-1零散知识.md",
     "2_C++/Cpp3、C++复习2-1.md",
     "10_2025模拟面试整理/A、26.1.16的整理.md",
