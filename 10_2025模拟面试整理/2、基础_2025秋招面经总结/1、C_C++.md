@@ -300,6 +300,13 @@
 - set是关系型容器，C++是红黑树，JAVA底层是哈希表
 - map是关系型容器，红黑树
 
+deque迭代器内部包含 4 个指针，它们各自的作用为：
+- cur：指向当前正在遍历的元素；
+- first：指向当前连续空间的首地址；
+- last：指向当前连续空间的末尾地址；
+- node：它是一个二级指针，用于指向 map 数组中存储的指向当前连续空间的指针。
+[C++ STL deque 容器底层实现原理（深度剖析） - 知乎](https://zhuanlan.zhihu.com/p/562914205)
+
 ### 18. STL迭代器的种类及使用场景？ 
 
 面试思路：
@@ -308,7 +315,7 @@
 笔记：
 - ==**输入迭代器：**== istream_iterator；作用：输入流中读数据，文件/标准输入
 - ==**输出迭代器：**== ostream_iterator；作用：写入输出流，文件/标准输出
-- ==**前向迭代器：**== vector/list提供；遍历/修改容器中元素，find/replace
+- ==**单（前）向迭代器：**== vector/list提供；遍历/修改容器中元素，find/replace
 - ==**双向迭代器：**== vector/list；向前后遍历，reverse/rotate
 - ==**随机访问迭代器：**== vector/deque/array提供，容器中快速访问，sort/binary_search 
 
@@ -316,6 +323,12 @@
 ### 19. C++中的四种cast转换（static_cast、dynamic_cast、const_cast、reinterpret_cast）区别？ 
 
 - 隐式类型转换、静态类型转换`static_cast`、重新解释类型转换`reinterpret_cast`、动态类型转换`dynamic_cast`
+
+**static_cast 与 dynamic_cast 区别总结：**
+- `static_cast`支持相关数据类型转换，`dynamic_cast`不支持
+- 对于继承关系中的转换，`static_cast`可以向上和向下转换，`dynamic_cast`向上转换与`static_cast`一致，向下转换，父类要有虚函数，并且存在检验机制
+- `static_cast`不支持交叉转换，只能是向上下，`dynamic_cast`可以交叉转换（左子树的往右子树转）
+
 【挖坑】
 lamuda函数后，讨论到拉姆达函数的时候，项目高阶会用，公司全是这玩意
 ### 20. 面向对象的三大特性（封装、继承、多态）？ 
