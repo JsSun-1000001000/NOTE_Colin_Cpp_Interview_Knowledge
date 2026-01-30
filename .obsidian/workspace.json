@@ -6,6 +6,7 @@
       {
         "id": "f5cb64fa0b972380",
         "type": "tabs",
+        "dimension": 65.50522648083623,
         "children": [
           {
             "id": "d9dfc0d0cd10a570",
@@ -26,6 +27,7 @@
       {
         "id": "22bedeeaaeb87d9a",
         "type": "tabs",
+        "dimension": 34.494773519163765,
         "children": [
           {
             "id": "9a323af6c100ce81",
@@ -228,10 +230,10 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "d9dfc0d0cd10a570",
+  "active": "9a323af6c100ce81",
   "lastOpenFiles": [
-    "10_2025模拟面试整理/A、26.1.16的整理.md",
     "15_ai面试问题梳理/1、AI九识C++.md",
+    "10_2025模拟面试整理/A、26.1.16的整理.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/2、Linux.md",
     "关于面稿.md",
     "14_面试记录/1、九识C++.md",
