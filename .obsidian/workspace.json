@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "epoll",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -208,10 +209,11 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "d9dfc0d0cd10a570",
+  "active": "a0cdc7d0fa1cc752",
   "lastOpenFiles": [
-    "关于面稿.md",
+    "10_2025模拟面试整理/2、基础_2025秋招面经总结/2、Linux.md",
     "15_ai面试问题梳理/1、AI九识C++.md",
+    "关于面稿.md",
     "14_面试记录/1、九识C++.md",
     "10_2025模拟面试整理/A、26.1.16的整理.md",
     "特斯拉笔试.md",
@@ -233,7 +235,6 @@
     "copilot/copilot-conversations/介绍一下自己@20260118_142813.md",
     "copilot/copilot-conversations/介绍一下自己，用的什么模型？@20260118_114349.md",
     "14_面试记录",
-    "10_2025模拟面试整理/2、基础_2025秋招面经总结/2、Linux.md",
     "10_2025模拟面试整理/1、总结pdf/2025 项目面经总结.pdf",
     "2_C++/Cpp8、C++复习4-2设计原则.md",
     "欢迎.md",
