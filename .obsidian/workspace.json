@@ -6,7 +6,6 @@
       {
         "id": "f5cb64fa0b972380",
         "type": "tabs",
-        "dimension": 84.6311475409836,
         "children": [
           {
             "id": "d9dfc0d0cd10a570",
@@ -20,25 +19,6 @@
               },
               "icon": "lucide-file",
               "title": "2、Linux"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ed45722adaa76fd7",
-        "type": "tabs",
-        "dimension": 15.368852459016393,
-        "children": [
-          {
-            "id": "d0b47dc8dc92ee14",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "2025 秋招面经总结"
             }
           }
         ]
