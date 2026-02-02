@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231.5
+    "width": 200
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -210,6 +210,7 @@
   },
   "active": "d9dfc0d0cd10a570",
   "lastOpenFiles": [
+    "16_二面",
     "15_ai面试问题梳理/1、AI九识C++.md",
     "关于面稿.md",
     "14_面试记录/1、九识C++.md",
