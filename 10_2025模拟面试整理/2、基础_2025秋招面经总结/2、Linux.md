@@ -133,10 +133,10 @@ head 查看文件前几行
 	- MFU——只有频繁访问新数据的时候有用，其他情况命中率极低
 
 笔记：
-1. OPT (Optimal) 
-2. ARC (Adaptive Replacement Cache)
-3. 改进型CLOCK
-4. LRU
+1. OPT（Optimal）：优先淘汰最长时间内不会被访问的页面。缺页率最小，性能最好，但无法实现
+2. ARC（Adaptive Replacement Cache）
+3. 改进型CLOCK：在CLOCK基础上增加了==**访问位，修改位**==，在其他条件相同时优先淘汰没有修改过的页面。开销较小，性能也不错，Linux采用的是改进型CLOCK的变种。
+4. LRU（Least Recently used）：最近最少使用，每次淘汰的页面是最近最久未使用的页面，赋予每个页面对应的页表项中，用访问字段记录该页面自上次被访问以来所经历的时间t。但需要专门硬件支持，开销较大
 5. LFU
 6. CLOCK
 7. NRU
