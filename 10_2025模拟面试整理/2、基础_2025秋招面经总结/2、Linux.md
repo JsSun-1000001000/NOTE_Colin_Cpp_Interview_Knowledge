@@ -112,12 +112,12 @@ head 查看文件前几行
 	- **屏障barrier**
 
 笔记：
-1. 互斥锁mutex
-2. 信号量semaphore
-3. 条件变量condition variable
-4. 读写锁read-write lock
-5. 原子操作
-6. **屏障barrier**
+1. 互斥锁mutex：
+2. 信号量semaphore：
+3. 条件变量condition variable：
+4. 读写锁read-write lock：
+5. 原子操作：
+6. **屏障barrier**：用于线程之间的同步，**==屏障允许每个线程在某个点上等待，直到所有线程都到达这个点后再继续执行。==**
 
 ### 15. 页面置换算法？ OPT、LRU、LFU、FIFO
 
