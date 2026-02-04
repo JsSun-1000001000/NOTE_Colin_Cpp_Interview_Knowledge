@@ -121,13 +121,27 @@ head 查看文件前几行
 
 思路：
 [list2pumlMindmap]
-- 页面置换算法(从夯到拉)
-	- OPT (Optimal)
-	- 
+- 页面置换算法(从夯到拉，并不绝对)
+	- OPT——不可实现的概念神
+	- ARC——综合最强，结合了LRU LFU
+	- 改进型CLOCK——LRU的变体
+	- LRU——利用了时间局部性原理
+	- LFU——利用了访问频率，无法适应访问模式的变化
+	- CLOCK——LRU的廉价版
+	- NRU——CLOCK粗糙版本
+	- FIFO——最简单的队列管理，可能导致Belady异常
+	- MFU——只有频繁访问新数据的时候有用，其他情况命中率极低
 
 笔记：
-
-
+1. OPT (Optimal) 
+2. ARC (Adaptive Replacement Cache)
+3. 改进型CLOCK
+4. LRU
+5. LFU
+6. CLOCK
+7. NRU
+8. FIFO
+9. MFU
 
 
 ### 虚拟内存、物理内存
