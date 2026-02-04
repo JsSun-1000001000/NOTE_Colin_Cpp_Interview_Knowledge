@@ -98,7 +98,26 @@ head 查看文件前几行
 - 每个独立的进程有程序运行的入口、顺序执行序列和程序出口；但是线程不能独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制，两者均可并发执行
 - linux下线程是轻量级进程，lpthread
 
-### 14. 线程是如何实现同步的？ 屏障
+### 14. 线程是如何实现同步的？ 
+
+思路：
+
+[list2pumlMindmap]
+- 常用的线程同步机制
+	- 互斥锁mutex
+	- 信号量semaphore
+	- 条件变量condition variable
+	- 读写锁read-write lock
+	- 原子操作
+	- **屏障barrier**
+
+笔记：
+1. 互斥锁mutex
+2. 信号量semaphore
+3. 条件变量condition variable
+4. 读写锁read-write lock
+5. 原子操作
+6. **屏障barrier**
 
 ### 15. 页面置换算法？ OPT、LRU、LFU、FIFO
 
