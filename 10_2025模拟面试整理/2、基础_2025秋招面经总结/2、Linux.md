@@ -254,3 +254,10 @@ malloc为什么不全部使用memory map分配内存
 - 平台支持：select在Windows、Mac、Linux上都支持；poll是类unix系统都支持；epoll是Linux独有的
 [面试必备：对 select，poll，epoll 的详细解析_poll和select和epoll的作用-CSDN博客](https://blog.csdn.net/Geffin/article/details/105364662)
 ### 27. [[高频]] Linux内存管理机制（虚拟内存、页表、缺页中断）？
+
+下周
+2.12 晚上7点8点
+
+下周四
+
+嵌入式软件实习生
