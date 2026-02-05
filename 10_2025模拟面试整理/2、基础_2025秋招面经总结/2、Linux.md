@@ -136,13 +136,16 @@ head 查看文件前几行
 1. OPT（Optimal）：优先淘汰最长时间内不会被访问的页面。缺页率最小，性能最好，但无法实现
 2. ARC（Adaptive Replacement Cache）
 3. 改进型CLOCK：在CLOCK基础上增加了==**访问位，修改位**==，在其他条件相同时优先淘汰没有修改过的页面。开销较小，性能也不错，Linux采用的是改进型CLOCK的变种。
-4. LRU（Least Recently used）：最近最少使用，每次淘汰的页面是最近最久未使用的页面，赋予每个页面对应的页表项中，用访问字段记录该页面自上次被访问以来所经历的时间t。但需要专门硬件支持，开销较大
-5. LFU
-6. CLOCK
-7. NRU
+4. LRU（Least Recently used）：最近最少使用，每次淘汰的页面是最近最久未使用的页面，赋予每个页面对应的页表项中，用访问字段记录该页面自上次被访问以来所经历的时间t。但需要专门硬件支持，开销较大。
+	- LRU的实现：数组、链表、哈希+链表
+5. LFU（Least Frequently Used）：最近最少未被使用（LFU看的是访问频率，LRU看的是访问时间）
+	- LFU的实现：`unordered_map`+数组、`unordered_map`+小顶堆、二级哈希映射（Java里是hashmap，对应C++的`unordered_map`）
+6. CLOCK（NRU）：最近未用，
+7. NRU：
 8. FIFO
 9. MFU
 
+[【算法】页面置换算法FIFO、LRU和LFU的概述以及实现方式_页置换算法的实现方法-CSDN博客](https://blog.csdn.net/IT_Mitchell/article/details/100099649)
 
 ### 虚拟内存、物理内存
 
