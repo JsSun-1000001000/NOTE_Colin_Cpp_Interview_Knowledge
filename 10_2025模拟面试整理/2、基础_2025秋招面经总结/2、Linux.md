@@ -213,11 +213,22 @@ sendfile + DMA 真正意味上的零拷贝==**（1、2是主要的一定要答�
 3. **Direct I/O**： Direct I/O 绕过了内核缓冲区，直接在用户空间和磁盘之间传输数据。这种方式完全避免了内核态的拷贝，但需要硬件支持。
 4. **splice**： splice 允许在两个文件描述符之间直接传输数据（如管道和套接字），无需经过用户空间，从而减少了数据拷贝次数。Linux 内核在 2.6 版本引入。
 
-### 16. free释放的内存会立即还给操作系统吗？——分情况：malloc 和 mar
+### 16. ==delete/free释放的内存会立即还给操作系统吗？== 
+
+思路：
+
+笔记：
+- 先说结论：通常不会，甚至可以说大概率不会，绝大多数情况下不会。
+- 那释放的内存去哪里了？返还给堆内存管理器了，当然也可以说返还给C/C++运行时库了（具体到Linux上，是返回给glibc的ptmalloc了——glibc是Linux下的C标准库，也是C运行库的核心实现，ptmalloc就是glibc默认的内存管理器）
+- ==**怎么证明free释放的内存没有立刻返回给操作系统？**==——malloc一个指针，free掉，然后再将这个指针赋值，没有报错
+
 
 malloc分配的是虚拟内存
 
 malloc为什么不全部使用memory map分配内存
+[操作系统资源回收问题——delete或者free释放的内存会立即回收到操作系统吗？ - 意大利泡面 - 博客园](https://www.cnblogs.com/x-bene/p/15516229.html)
+[8.被free回收的内存是立即返还给操作系统吗？为什么？通常不会。 被 free 回收的内存并 不是立即返还给操作系统 - 掘金](https://juejin.cn/post/7539492996738105390)
+[被free回收的内存是立即返还给操作系统吗_free 回收-CSDN博客](https://blog.csdn.net/weixin_60630451/article/details/126683157)
 [malloc 内存分配机制：brk 与 mmap_brk和mmap-CSDN博客](https://blog.csdn.net/JHXXH/article/details/148411529)
 
 ### 17. 协程
