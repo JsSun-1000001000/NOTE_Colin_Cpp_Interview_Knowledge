@@ -18,6 +18,7 @@
 - malloc从堆区分配内存，new从自由存储区分配内存（堆、静态存储区等，看在哪里为对象分配）
 - malloc开辟虚拟内存 32位不到4g
 
+
 > [!NOTE] new的底层是怎么实现的？new的实现需要类型转换吗？
 > 有两个部分，分配器和构造器；分配器是operator new函数，这个函数的底层是用malloc实现的；同样operator delete底层是free
 

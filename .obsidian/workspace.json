@@ -20,21 +20,8 @@
               "icon": "lucide-file",
               "title": "1、C_C++"
             }
-          },
-          {
-            "id": "0aef07e601c3d981",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.11.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "版本说明 1.11.7"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -221,8 +208,10 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "0aef07e601c3d981",
+  "active": "a7230c6ebee12e5f",
   "lastOpenFiles": [
+    "1_C/C6、C语言复习3-2.md",
+    "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
     "5_网络/Net1、网络复习1-1.md",
     "5_网络/相关资料/网络导图.jpg",
     "9_面试算法/算法资料/算法进阶题单1.pdf",
@@ -232,7 +221,6 @@
     "9_面试算法/算法资料/2、面试算法—链表专题.md",
     "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/4、网络协议.md",
-    "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/2、Linux.md",
     "14_面试记录/1、九识C++.md",
     "14_面试记录/2、影石.md",
@@ -243,7 +231,6 @@
     "2_C++/Cpp5、C++11复习3-1.md",
     "2_C++/Cpp3、C++复习2-1.md",
     "关于面稿.md",
-    "1_C/C6、C语言复习3-2.md",
     "1_C/C3、C语言复习2-1.md",
     "1_C/C1、动员&学习方法.md",
     "1_C/C2、C语言复习1.md",
