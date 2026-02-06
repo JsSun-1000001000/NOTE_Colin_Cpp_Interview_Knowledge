@@ -253,6 +253,7 @@ malloc为什么不全部使用memory map分配内存
 [深入理解 malloc：ptmalloc 机制、堆布局与内核映射-CSDN博客](https://blog.csdn.net/love131452098/article/details/153343861
 [存优化总结:ptmalloc、tcmalloc和jemalloc - 知乎](https://zhuanlan.zhihu.com/p/497509956)
 [malloc 内存分配机制：brk 与 mmap_brk和mmap-CSDN博客](https://blog.csdn.net/JHXXH/article/details/148411529)
+[ptmalloc：从内存虚拟化说起-CSDN博客](https://blog.csdn.net/treblez/article/details/134912761)
 
 ### 17. 协程
 
