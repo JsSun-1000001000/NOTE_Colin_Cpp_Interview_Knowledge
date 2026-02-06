@@ -228,6 +228,19 @@ sendfile + DMA 真正意味上的零拷贝==**（1、2是主要的一定要答�
 	- 同时连续大块内存也会被切碎了；
 	- 操作系统分配一块内存要经历用户态到内核态的切换，这是一个很tm耗时操作；
 	- 上面说到的这个运行时库就是一次性申请一块大内存然后自己管理，这样分配和回收都在用户态内部完成，速度更快。与此同时运行时库的内存管理器（ptmalloc）会尝试合并相邻的被释放的小内存块，形成连续大内存块。
+7. 说到ptmalloc，内存会被ptmalloc用==**双向链表**==保存起来，等下次申请的时候，再尝试从内存中找合适的返回。这也是栈和堆的区别之一
+
+> [!NOTE] ptmalloc、jemalloc、tcmalloc
+> 首先，ptmalloc是glibc提供的；jemalloc是google的；jemalloc是facebook的
+> ##### ptmalloc是怎么进行内存管理的？
+> ##### ptmalloc的分配流程
+> ##### ptmalloc有什么缺陷？
+> ##### tcmalloc的原理
+> ##### jemalloc的原理
+> ##### 性能对比和使用场景
+> - 多线程环境更适合用tcmalloc和jemalloc
+> - 当线程数量固定，不会频繁创建退出的时候， 可以使用jemalloc；反之使用tcmalloc可能是更好的选择
+
 
 
 malloc分配的是虚拟内存
@@ -237,6 +250,7 @@ malloc为什么不全部使用memory map分配内存
 [8.被free回收的内存是立即返还给操作系统吗？为什么？通常不会。 被 free 回收的内存并 不是立即返还给操作系统 - 掘金](https://juejin.cn/post/7539492996738105390)
 [被free回收的内存是立即返还给操作系统吗_free 回收-CSDN博客](https://blog.csdn.net/weixin_60630451/article/details/126683157)
 [深入理解 malloc：ptmalloc 机制、堆布局与内核映射-CSDN博客](https://blog.csdn.net/love131452098/article/details/153343861
+[存优化总结:ptmalloc、tcmalloc和jemalloc - 知乎](https://zhuanlan.zhihu.com/p/497509956)
 [malloc 内存分配机制：brk 与 mmap_brk和mmap-CSDN博客](https://blog.csdn.net/JHXXH/article/details/148411529)
 
 ### 17. 协程
