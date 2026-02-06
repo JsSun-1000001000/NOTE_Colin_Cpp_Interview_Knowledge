@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "粘包",
+                "query": "堆和栈",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -208,14 +208,14 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "d9dfc0d0cd10a570",
+  "active": "34583f1d86c711fd",
   "lastOpenFiles": [
-    "10_2025模拟面试整理/2、基础_2025秋招面经总结/2、Linux.md",
+    "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
     "14_面试记录/2、影石.md",
+    "10_2025模拟面试整理/2、基础_2025秋招面经总结/2、Linux.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/4、网络协议.md",
     "关于面稿.md",
     "1_C/C6、C语言复习3-2.md",
-    "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
     "1_C/C3、C语言复习2-1.md",
     "1_C/C1、动员&学习方法.md",
     "1_C/C2、C语言复习1.md",
