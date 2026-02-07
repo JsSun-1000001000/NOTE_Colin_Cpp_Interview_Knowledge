@@ -23,4 +23,9 @@ During my time at school, I studied basic C/C plus plus, data structures, databa
 I'm really excited to be here to learn more about XXX, discuss how I can contribute to this role, and work effectively with your team.
 
 ---
-# 
+# 遇到了哪些问题？
+
+## 趣聊星球
+
+## 五子智弈
+
