@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "17_面稿/a、一面面稿.md",
+                "file": "18_思维导图/3、数据库.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "a、一面面稿"
+              "title": "3、数据库"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 225.5
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -205,13 +205,21 @@
       "obsidian-git:Open Git source control": false,
       "copilot:Open Copilot Chat": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
+      "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
   "active": "a7230c6ebee12e5f",
   "lastOpenFiles": [
-    "10_2025模拟面试整理/2、基础_2025秋招面经总结/4、网络协议.md",
+    "18_思维导图/3、数据库.md",
+    "18_思维导图/4、操作系统（基础知识）.md",
+    "18_思维导图/6、算法.md",
+    "18_思维导图/5、Linux与Linux内核.md",
+    "18_思维导图/2、网络.md",
+    "18_思维导图/1、C和C++.md",
     "17_面稿/a、一面面稿.md",
+    "18_思维导图",
+    "10_2025模拟面试整理/2、基础_2025秋招面经总结/4、网络协议.md",
     "2_C++/Cpp9、C++复习4-2设计模式.md",
     "2_C++/Cpp8、C++复习4-2设计原则.md",
     "15_ai面试问题梳理/1、AI九识C++.md",
@@ -237,16 +245,9 @@
     "2_C++/Cpp13、C++11—lambda表达式.md",
     "2_C++/Cpp5、C++11复习3-1.md",
     "2_C++/Cpp3、C++复习2-1.md",
-    "1_C/C3、C语言复习2-1.md",
-    "1_C/C1、动员&学习方法.md",
-    "1_C/C2、C语言复习1.md",
-    "10_2025模拟面试整理/A、26.1.16的整理.md",
-    "13_往年面试题/3、小红书 ios-社区技术 一面.md",
-    "13_往年面试题/1、小米C++.md",
     "16_常考手撕代码",
     "10_2025模拟面试整理/1、总结pdf/2025 项目面经总结.pdf",
     "16_二面",
-    "14_面试记录/算法题",
     "14_面试记录/算法题/九识一面算法.png",
     "6_操作系统/讲解图片/页表与地址映射.png",
     "6_操作系统/相关资料/Linux系统/linux/linux/二、和网络有关的命令_files/54a11daa-0a02-4ed1-97d9-e89f987a5be2.png",
