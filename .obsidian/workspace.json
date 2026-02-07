@@ -10,7 +10,7 @@
           {
             "id": "43acfcc15134a652",
             "type": "tabs",
-            "dimension": 80.03472222222221,
+            "dimension": 82.63888888888889,
             "children": [
               {
                 "id": "a7230c6ebee12e5f",
@@ -31,7 +31,7 @@
           {
             "id": "4ea39e1b48deec68",
             "type": "tabs",
-            "dimension": 19.96527777777778,
+            "dimension": 17.36111111111111,
             "children": [
               {
                 "id": "37eb3accbb94fb30",
@@ -234,7 +234,7 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "37eb3accbb94fb30",
+  "active": "a7230c6ebee12e5f",
   "lastOpenFiles": [
     "18_思维导图/3、数据库.md",
     "18_思维导图/4、操作系统（基础知识）.md",
