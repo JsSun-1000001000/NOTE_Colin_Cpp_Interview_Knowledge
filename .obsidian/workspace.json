@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "17_面稿/a、一面面稿.md",
+                "file": "10_2025模拟面试整理/2、基础_2025秋招面经总结/2、Linux.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "a、一面面稿"
+              "title": "2、Linux"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e0ba745ab79ee256",
@@ -211,8 +210,8 @@
   },
   "active": "a7230c6ebee12e5f",
   "lastOpenFiles": [
-    "17_面稿/关于面稿.md",
     "17_面稿/a、一面面稿.md",
+    "17_面稿/关于面稿.md",
     "15_ai面试问题梳理/1、AI九识C++.md",
     "14_面试记录/2、影石.md",
     "14_面试记录/1、九识C++.md",
