@@ -10,7 +10,7 @@
           {
             "id": "43acfcc15134a652",
             "type": "tabs",
-            "dimension": 78.10077519379846,
+            "dimension": 80.62015503875969,
             "children": [
               {
                 "id": "a7230c6ebee12e5f",
@@ -31,7 +31,7 @@
           {
             "id": "4ea39e1b48deec68",
             "type": "tabs",
-            "dimension": 21.899224806201552,
+            "dimension": 19.379844961240313,
             "children": [
               {
                 "id": "37eb3accbb94fb30",
@@ -234,7 +234,7 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "37eb3accbb94fb30",
+  "active": "a7230c6ebee12e5f",
   "lastOpenFiles": [
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/2、Linux.md",
     "18_思维导图/3、数据库.md",
