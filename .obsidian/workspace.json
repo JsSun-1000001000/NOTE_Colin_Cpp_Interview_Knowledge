@@ -10,7 +10,7 @@
           {
             "id": "43acfcc15134a652",
             "type": "tabs",
-            "dimension": 82.63888888888889,
+            "dimension": 78.29457364341084,
             "children": [
               {
                 "id": "a7230c6ebee12e5f",
@@ -31,7 +31,7 @@
           {
             "id": "4ea39e1b48deec68",
             "type": "tabs",
-            "dimension": 17.36111111111111,
+            "dimension": 21.705426356589147,
             "children": [
               {
                 "id": "37eb3accbb94fb30",
@@ -40,7 +40,7 @@
                   "type": "mindmap",
                   "state": {},
                   "icon": "dot-network",
-                  "title": "Mind Map of Mind Map of 3、数据库"
+                  "title": "Mind Map of 3、数据库"
                 }
               }
             ]
