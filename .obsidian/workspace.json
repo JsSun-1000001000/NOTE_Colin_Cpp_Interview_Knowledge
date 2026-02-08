@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "17_面稿/c、HR面稿.md",
+                "file": "17_面稿/a、一面面稿.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "c、HR面稿"
+              "title": "a、一面面稿"
             }
           }
         ]
@@ -211,8 +211,8 @@
   },
   "active": "a7230c6ebee12e5f",
   "lastOpenFiles": [
-    "17_面稿/a、一面面稿.md",
     "17_面稿/关于面稿.md",
+    "17_面稿/a、一面面稿.md",
     "17_面稿/c、HR面稿.md",
     "1_C/C相关资料/README.md",
     "1_C/C8、C习题1.md",
