@@ -1,4 +1,26 @@
+尊敬的面试官，您好。 
 
+我是孙笳十，本科毕业于哈尔滨理工大学软件工程专业，目前已被香港理工大学元宇宙技术硕士项目录取，预计于2026年9月入学。在校期间，我通过了英语四六级考试，并考得雅思6.0。 
+
+在本科期间，我注重理论与实践的结合，专业排名保持在15%，并两次获得校级三等奖学金。我也积极参与多项学科竞赛，曾在“互联网+”大学生创新创业大赛、计算机设计大赛等比赛中获奖，这些经历锻炼了我的创新思维与团队协作能力。 我始终相信“动手实践是最好的学习”。在学习之余，我主导或参与了多个软件开发项目。例如“五子智弈”游戏大厅项目，我负责设计并实现了基于C/S架构的系统，使用QT开发客户端，在Linux服务端采用epoll与线程池处理高并发，并通过自定义协议和MySQL数据库支持用户管理与实时对战。另一个项目“趣聊星球”是一款轻量级实时聊天系统，我使用TCP协议和中介者模式实现了客户端与服务端的高效通信与好友管理。这些项目让我对网络编程、数据库设计与软件架构有了扎实的实战理解。
+
+此外，我还参与到了老师的项目团队中负责论文的撰写和翻译工作，并拥有一项软件著作权，这些经历进一步培养了我的科研素养与工程规范意识。 我期待能在未来的学习和工作中，继续发挥我的技术能力与实践经验，为团队带来切实价值。 谢谢。
+
+Good morning/afternoon,
+
+First of all, Thank you for this opportunity, it is an great honor for me to join this job interview today.
+
+My name is Sun Jiashi. I hold a Bachelor’s degree in Software Engineering from Harbin University of Science and Technology, and I have been admitted to the Master of Science in Metaverse Technology at The Hong Kong Polytechnic University, starting in September 2026. During my studies, I passed both CET-4 and CET-6, and achieved an IELTS score of 6.0.
+
+Throughout my undergraduate degree, I maintained a balance between theoretical knowledge and practical application, ranking within the top 15% of my cohort and receiving the university’s third-class scholarship twice. I also actively participated in various academic competitions, such as the “Internet plus” Innovation and Entrepreneurship Competition and the Computer Design Competition, which strengthened my innovative thinking and teamwork skills.
+
+I firmly believe that “hands-on experience is the best way to learn.” Alongside my coursework, I took the lead in several software development projects. For example, in the “Five-in-a-Row Intelligent Gaming” project, I was responsible for designing and implementing a C/S architecture system. The client was developed using QT, while the Linux server utilised epoll and a thread pool to manage high concurrency. Custom protocols and MySQL databases were employed to support user management and real-time gameplay. Another project, “FunChat Planet,” is a lightweight real-time chat system in which I implemented efficient client-server communication and friend management using TCP protocols and the mediator design pattern. These projects provided me with solid practical understanding of network programming, database design, and software architecture.
+
+Additionally, I assisted in my supervisor’s research team by contributing to paper writing and translation tasks, and I also hold a software copyright. These experiences further developed my research literacy and awareness of engineering standards.
+
+I am eager to continue applying my technical skills and practical experience in my future studies and career, and I look forward to contributing tangible value to your team.
+
+Thank you.
 
 1. **首先，自我介绍：**
 	- 交代个人情况、在校情况、毕业情况；
