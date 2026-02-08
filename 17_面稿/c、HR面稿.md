@@ -22,6 +22,11 @@ I am eager to continue applying my technical skills and practical experience in 
 
 Thank you.
 
+## 反问
+
+- **你希望我是成为什么样的人，才能可以更好的融入公司？**
+
+
 1. **首先，自我介绍：**
 	- 交代个人情况、在校情况、毕业情况；
 	- 毕业院校、专业、投什么岗位、获得奖项、英语水平；
