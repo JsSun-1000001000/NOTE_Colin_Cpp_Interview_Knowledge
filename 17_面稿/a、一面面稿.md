@@ -387,7 +387,6 @@ sort(candidates.begin(), candidates.end(), [&](pair<int,int>&a, pair<int,int>&b)
 3. **内存顺序保证**：确保线程间的内存可见性
 
 **使用场景**：
-
 - 主线程初始化 `m_taskCount = candidates.size()`
 - 每个工作线程完成后执行 `m_taskCount--`
 - 主线程检查 `m_taskCount == 0` 判断所有任务完成
@@ -493,6 +492,7 @@ cpp
 
 cpp
 
+```cpp
 string getBoardHash(vector<vector<int>> &board){
     string hash;
     for(int i = 0; i < FIL_COLS; ++i){
@@ -502,6 +502,7 @@ string getBoardHash(vector<vector<int>> &board){
     }
     return hash; // 225个字符的字符串
 }
+```
 
 ### 18. **如何平衡搜索深度和响应时间？`MAX_DEPTH=5` 的选择依据是什么？**
 
