@@ -6,6 +6,7 @@
       {
         "id": "43acfcc15134a652",
         "type": "tabs",
+        "dimension": 45.169082125603865,
         "children": [
           {
             "id": "a7230c6ebee12e5f",
@@ -13,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14_思维导图/1、C和C++.md",
+                "file": "11_面试记录/2、影石.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1、C和C++"
+              "title": "2、影石"
             }
           }
         ]
@@ -26,6 +27,7 @@
       {
         "id": "59622db673832fbe",
         "type": "tabs",
+        "dimension": 54.830917874396135,
         "children": [
           {
             "id": "1571c7709453b739",
@@ -229,8 +231,9 @@
       "markdown-importer:打开 Markdown 格式转换器": false
     }
   },
-  "active": "a7230c6ebee12e5f",
+  "active": "1571c7709453b739",
   "lastOpenFiles": [
+    "11_面试记录/2、影石.md",
     "10_2025模拟面试整理/2、基础_2025秋招面经总结/1、C_C++.md",
     "14_思维导图/1、C和C++.md",
     "10_2025模拟面试整理/1、总结pdf/2025 秋招面经总结.pdf",
@@ -249,7 +252,6 @@
     "2_C++/Cpp4、C++11复习2-2.md",
     "2_C++/Cpp2、C++复习1-2.md",
     "11_面试记录/1、九识C++.md",
-    "11_面试记录/2、影石.md",
     "11_面试记录/3、京东测开.md",
     "13_面稿/关于面稿.md",
     "12_ai面试问题梳理/2、ai五子棋基础.md",
